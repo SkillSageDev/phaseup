@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./styles/inStyle.css">
-    <link rel="stylesheet" href="./styles/courseLine.css">
+    <link rel="stylesheet" href="./styles/courseGrid.css">
+    <style>
+        .lineTitle {
+            font-size: 20pt;
+            font-weight: bold;
+        }
+
+        main #welcome {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #8B30C4; */
+            background: linear-gradient(to bottom, #E3E1E9, #fff);
+            margin-left: -20%;
+            margin-right: -20%;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -21,19 +38,19 @@
             </li>
             <li id="enrolled_courses">
                 <ul>
-                    <li><img src="./../assets/enrolled courses.svg" alt=""></li>
+                    <li><img src="./../assets/enrolled courses.svg" alt="video icon"></li>
                     <li>Enrolled Courses</li>
                 </ul>
             </li>
             <li id="community">
                 <ul>
-                    <li><img src="./../assets/community.svg" alt=""></li>
+                    <li><img src="./../assets/community.svg" alt="community icon"></li>
                     <li>Community</li>
                 </ul>
             </li>
             <li id="notifications">
                 <ul>
-                    <li><img src="./../assets/notifications.svg" alt=""></li>
+                    <li><img src="./../assets/notifications.svg" alt="notification bell icon"></li>
                     <li>Notifications</li>
                 </ul>
             </li>
@@ -43,25 +60,233 @@
         </ul>
     </nav>
 
-    <section id="main">
+    <main>
+        <div id="welcome">
+            <h1>Welcome to PhaseUp</h1>
+            <h2>Your path to mastering all subjects</h2>
+        </div>
+        <!-- Favorite line -->
+        <p class="lineTitle">Favorite</p>
         <div class="courseLine">
-            <p class="lineTitle">Trending</p>
-            <div class="courseGrid">
-                <div>
-                    
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
                 </div>
-
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
-
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>        
         </div>
-    </section>
+        <!-- Currently Watching line (enrolled courses) -->
+        <p class="lineTitle">Watching</p>
+        <div class="courseLine">
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!-- Trending -->
+        <p class="lineTitle">Trending</p>
+        <div class="courseLine">
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!-- Newly Added -->
+        <p class="lineTitle">Newly Added</p>
+        <div class="courseLine">
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courseCard">
+                <div class="courseBanner">
+                    <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+                </div>
+                <div class="cardDescription">
+                    <br/>
+                    <div class="container">
+                        <p>Learn HTML in 4 Hours</p>
+                        <p>Elzero Web School</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+
+    </main>
 </body>
 </html>
