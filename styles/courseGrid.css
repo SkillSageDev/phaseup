@@ -6,44 +6,45 @@ main {
     margin: 0 4%;
 }
 
-.courseCard {
+.courseGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.courseGrid .courseCard {
     width: 350px;
     margin: 2%;
     /* height: 20%; */
 }
 
-.courseCard .courseBanner {
+.courseGrid .courseCard .courseBanner {
     width: 100%;
     height: auto;
 }
 
-.courseCard .courseBanner img {
+.courseGrid .courseCard .courseBanner img {
     /* display block removes the small empty line after the img */
     display: block;
     width: 100%;
     border-radius: 20px 20px 0 0;
 }
 
-.courseCard .cardDescription {
+.courseGrid .courseCard .cardDescription {
     border-radius: 0 0 20px 20px;
     background-color: #E3E1E9;
     padding: 4% 4%;
 }
 
-.courseCard .cardDescription .container {
+.courseGrid .courseCard .cardDescription .container {
     margin: 0 8%;
 }
 
-.courseCard .cardDescription .container p {
+.courseGrid .courseCard .cardDescription .container p {
     margin: 0 0 16px 0;
     width: 100%;
     font-size: 16pt;
 }
 
-.courseLine {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1%;
-}
 
