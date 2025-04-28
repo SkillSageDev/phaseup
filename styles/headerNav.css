@@ -30,11 +30,12 @@ header > nav > ul{
     gap: 10%;
     margin-block: 0;
     padding-inline: 0;
+    /* height: 3rem; */
 }
 
 header > nav > ul > li {
     margin: 0.2%;
-    
+    cursor: pointer;
 }
 
 header > nav > ul > li > ul {
@@ -48,12 +49,14 @@ header > nav > ul > li > ul {
 }
 
 #logo > img{
-    width: 60%;
+    /* width: 60%; */
+    width: 5rem;
     height: auto;
 }
 
 #user_icon > img{
-    width: 30%;
+    /* width: 30%; */
+    width: 4rem;
     height: auto;
 }
 
