@@ -5,6 +5,8 @@
                   make icons not disappear when minimizing the width
                   make 2 styles: web app for mobile & a normal web for desktop
     divide&conquer: put a header > nav css in a separate file (file for each component for future use)
+    problems: inclined in home only for some reason
+              home is not necessary (and icons are not necessary XD)
 */
 
 body {
@@ -38,7 +40,7 @@ header > nav > ul > li {
     cursor: pointer;
 }
 
-header > nav > ul > li > ul {
+header > nav > ul > li  ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -48,18 +50,21 @@ header > nav > ul > li > ul {
     padding: 0%;
 }
 
-#logo > img{
+#logo  img{
     /* width: 60%; */
     width: 5rem;
     height: auto;
 }
 
-#user_icon > img{
+#user_icon  img{
     /* width: 30%; */
     width: 4rem;
     height: auto;
 }
 
-
+header > nav  a {
+    text-decoration: none;
+    color: black;
+}
 
 
