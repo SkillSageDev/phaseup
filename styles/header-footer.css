@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-poppins-regular);
 }
 
-:root {
-  --color-primary: #8b30c4;
-  --color-border-hover: #8b30c459;
-  --color-button-hover: #8b30c4cb;
-}
 /* *----Header---- */
 
+/* hamburger list */
+header .hamburger{
+  display: none;
+}
 /* *main container */
 header {
   height: max-content;
@@ -24,6 +24,7 @@ header .container {
   align-items: center;
   background: #fdfdfd;
   padding: 0.5rem 0;
+  gap: 0.25rem;
 }
 
 /* ?logo */
@@ -52,10 +53,11 @@ header button:hover {
 }
 
 /* *Explore Button */
-/* ?arrow in explore btn */
-header .explore {
+/* ?arrow and explore btn */
+header .explore button {
   display: flex;
   position: relative;
+  gap: 0.1rem;
 }
 
 /* ?Explore text */
@@ -65,8 +67,6 @@ header .explore span {
 
 /* ?arrow */
 header .explore img {
-  position: relative;
-  top: 0.2rem;
   width: 0.8rem;
 }
 
@@ -97,7 +97,7 @@ header .explore img {
 }
 
 /* ?the actual results */
-.search-result ul li{
+.search-result ul li {
   list-style: none;
   border-radius: 0.5rem;
   background-color: #8b30c4;
@@ -136,8 +136,13 @@ header .explore img {
 /* *login and sign up */
 
 /* ?login/signup button */
+header .auth {
+  display: flex;
+  gap: 0.25rem;
+}
+
 header .auth button {
-  width: 5.6rem;
+  width: 6rem;
 }
 
 /* ?login button */
@@ -177,4 +182,43 @@ footer a img {
 /* *copyright text */
 footer .copyright {
   margin-bottom: 1rem;
+}
+
+/* !media query */
+
+@media (max-width: 585px) {
+  header button,
+  header .explore button {
+    display: none;
+  }
+
+  header{
+    margin: 0 0.7rem;
+  }
+
+  header .container{
+    justify-content: space-around;
+  }
+
+  .search {
+    display: flexbox;
+    width: 70%;
+    height: 100%;
+    margin-right: 1rem;
+  }
+
+  header .hamburger{
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  /* ?logo */
+.logo img {
+  position: relative;
+  top: 0.1rem;
+  left: 0.5rem;
+  width: 3.5rem;
+  cursor: pointer;
+}
+
 }

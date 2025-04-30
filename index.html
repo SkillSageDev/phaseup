@@ -1,8 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/core/global.css">
+    <link rel="stylesheet" href="./styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./styles/header-footer.css" />
     <link
       rel="stylesheet"
@@ -13,6 +15,9 @@
   <body>
     <header>
       <div class="container">
+        <div class="hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
         <div class="logo">
           <a href="#"><img src="./assets/images/Logo.svg" alt="logo" /></a>
         </div>
@@ -33,12 +38,12 @@
             />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <div class="search-result">
+          <!-- <div class="search-result">
             <ul>
               <li>Javascript</li>
               <li>Javascript</li>
             </ul>
-          </div>
+          </div> -->
         </form>
         <div class="auth">
           <button class="login">Login</button>
