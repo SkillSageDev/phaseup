@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="./../styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./../styles/header-footer.css" />
     <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
-    <style>
-        main{
-            height: 50rem;
+   <style>
+        main {
+            /* height: 50rem; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
         }
 
-        main > section a {
+        main a {
             display: inline-block;
             text-decoration: none;
             margin: 5rem;
@@ -26,7 +30,7 @@
             transition: all 0.2s ease-out;
         }
 
-        main > section a:hover {
+        main a:hover {
             cursor: pointer;
             color: #f1f1f1;
             background-color: #0D0850;
@@ -34,13 +38,16 @@
             transition: all 0.2s ease-out;
         }
 
-        #payment_method {
-            /* background-color: aqua; */
-            margin: 0% 4%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5%;
+        main > h2 {
+            margin: 4rem 0 2rem 0;
+        }
+
+        #productImage {
+            width: 25rem;
+        }
+
+        #productImage img{
+            width: inherit;
         }
     </style>
 </head>
@@ -97,13 +104,14 @@
     </header>
 
     <main>
-        <section id="payment_options">
-            <p style="margin: 2% 4%; font-weight: 700; font-size: 20pt;">Payment method:</p>
-            <div id="payment_method">
-                <a href="./proceedPayment.html">Paypal</a>
-                <a href="./proceedPayment.html">Fawry</a>
-            </div>
-        </section>
+        <h1>Checkout</h1>
+        <div id="productImage">
+            <img src="./../assets/course banners/Csharp course 2.svg" alt="">
+        </div>
+        <h3>C# Course for Beginners</h3>
+        <h2>$45.99</h2>
+
+        <a href="#">Proceed</a>
     </main>
 
     <footer>
@@ -129,7 +137,7 @@
         </div>
         <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
     </footer>
-
+    
     <script src="./../scripts/header-showmenu.js"></script>
 </body>
 </html>

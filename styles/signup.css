@@ -1,0 +1,115 @@
+body
+{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    color: #010F11 ;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    src: url("./../assets/login/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+#welcome
+{
+    padding-right: 100px;
+}
+#welcome >h1
+{
+    font-size: 30px;
+}
+#welcome >p
+{
+    font-size: 18px;
+}
+
+#background_sign
+{
+    background-color: white;
+    box-shadow: 0 0 1px #010F11;
+    border-radius: 10px;
+    width: 100vh;
+    height:65vh;
+    padding: 3% 0% 0% 2%;
+    margin-top: 100px;
+    display: grid;
+}
+
+#signup_text
+{
+    font-size: 40px;
+    font-weight: 600;
+}
+.bar
+{
+    width: 95%;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.bar >span
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding: 0 20px 0 10px;
+}
+.bar >span >hr
+{
+    background-color: #010F11;
+    border: none;
+    width: 1px;
+    height: 4vh;
+}
+.input
+{
+    width: 100%;
+    padding-left: 50px;
+    border-radius: 10px;
+    border: unset;
+    box-shadow: 0px 0px 1px #010F11 ;
+    outline: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+}
+.page_link
+{
+    color: #E86AE6;
+}
+.page_link:hover
+{
+    color: #f397f8ff;
+}
+#submit_btn
+{
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+    background-color: #E86AE6;
+    color: white;
+    border: unset;
+    box-shadow: 0px 0px 1px #010F11 ;
+    outline: none;
+}
+#submit_btn:hover
+{
+    background-color: #f397f8ff;
+}
+
+
+
+
+
+

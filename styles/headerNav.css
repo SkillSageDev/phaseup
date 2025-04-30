@@ -37,7 +37,6 @@ header > nav > ul{
 
 header > nav > ul > li {
     margin: 0.2%;
-    cursor: pointer;
 }
 
 header > nav > ul > li  ul {
@@ -65,6 +64,10 @@ header > nav > ul > li  ul {
 header > nav  a {
     text-decoration: none;
     color: black;
+}
+
+header > nav a:hover {
+    cursor: pointer;
 }
 
 

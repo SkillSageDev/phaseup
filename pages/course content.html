@@ -1,48 +1,18 @@
+<!-- 
+ is the page which opens after you enrolled to the course, and start studying, you have to be signed to see this page.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment</title>
+    <title>Course Content</title>
+    <link rel="stylesheet" href="./../styles/courseGrid.css">
     <link rel="stylesheet" href="./../styles/core/global.css" />
     <link rel="stylesheet" href="./../styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./../styles/header-footer.css" />
     <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
-    <style>
-        main{
-            height: 50rem;
-        }
-
-        main > section a {
-            display: inline-block;
-            text-decoration: none;
-            margin: 5rem;
-            padding: 1.5rem 4rem;
-            border: 1px solid #0D0850;
-            border-radius: 15px;
-            background-color: #f1f1f1;
-            color: #0D0850;
-            font-size: 20pt;
-            transition: all 0.2s ease-out;
-        }
-
-        main > section a:hover {
-            cursor: pointer;
-            color: #f1f1f1;
-            background-color: #0D0850;
-            padding: 1.7rem 4.5rem;
-            transition: all 0.2s ease-out;
-        }
-
-        #payment_method {
-            /* background-color: aqua; */
-            margin: 0% 4%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5%;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -95,16 +65,6 @@
           </ul>
         </div>
     </header>
-
-    <main>
-        <section id="payment_options">
-            <p style="margin: 2% 4%; font-weight: 700; font-size: 20pt;">Payment method:</p>
-            <div id="payment_method">
-                <a href="./proceedPayment.html">Paypal</a>
-                <a href="./proceedPayment.html">Fawry</a>
-            </div>
-        </section>
-    </main>
 
     <footer>
         <div class="social">

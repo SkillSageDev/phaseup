@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error</title>
-    <link rel="stylesheet" href="./../styles/headerNav.css">
+    <link rel="stylesheet" href="./../styles/core/global.css" />
+    <link rel="stylesheet" href="./../styles/fonts/poppins.css" />
+    <link rel="stylesheet" href="./../styles/header-footer.css" />
+    <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
     <style>
         main {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -21,57 +24,84 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li id="logo">
-                    <a href="./../index.html">
-                        <img src="./../assets/PhaseUp Logo.svg" alt="PhaseUp Logo">
-                    </a>
-                </li>
-                <li id="home">
-                    <a href="./../index.html">
-                        <ul>
-                            <li><img src="./../assets/home.svg" alt=""></li>
-                            <li>Home</li>
-                        </ul>
-                    </a>
-                </li>
-                <li id="enrolled_courses">
-                    <a href="./errorPage.html">
-                        <ul>
-                            <li><img src="./../assets/enrolled courses.svg" alt="video icon"></li>
-                            <li>Enrolled Courses</li>
-                        </ul>
-                    </a>
-                </li>
-                <li id="community">
-                    <a href="./errorPage.html">
-                        <ul>
-                            <li><img src="./../assets/community.svg" alt="community icon"></li>
-                            <li>Community</li>
-                        </ul>
-                    </a>
-                </li>
-                <li id="notifications">
-                    <a href="./errorPage.html">
-                        <ul>
-                            <li><img src="./../assets/notifications.svg" alt="notification bell icon"></li>
-                            <li>Notifications</li>
-                        </ul>
-                    </a>
-                </li>
-                <li id="user_icon">
-                    <a href="./profile.html">
-                        <img src="./../assets/user icon.svg" alt="user profile icon">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+          <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-close"></i>
+          </div>
+          <div class="logo">
+            <a href="#"><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
+          </div>
+          <div class="explore">
+            <!-- ! needs some modification -->
+            <button>
+              <span>Explore</span>
+              <img src="./../assets/icons/angle-down-solid.svg" />
+            </button>
+          </div>
+          <form action="" class="search">
+            <div class="search-box">
+              <input
+                type="text"
+                name="search"
+                placeholder="Looking for something?"
+                id="search"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- <div class="search-result">
+              <ul>
+                <li>Javascript</li>
+                <li>Javascript</li>
+              </ul>
+            </div> -->
+          </form>
+          <div class="auth">
+            <button class="login">Login</button>
+            <button class="signup">Sign up</button>
+          </div>
+  
+          <!-- ----Hamberger Menu---- -->
+        </div>
+        <div class="menu" id="menu">
+          <ul>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li class="section"><span>Most popular</span></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Software</a></li>
+          </ul>
+        </div>
     </header>
 
     <main>
         <img src="./../assets/page_not_found_error_2.jpg" alt="">
     </main>
 
+    <footer>
+        <div class="social">
+            <a class="linkedin" href="#"
+            ><img src="./../assets/icons/linkedin-brands.svg" alt="linkedin"
+            /></a>
+            <a class="youtube" href="#"
+            ><img src="./../assets/icons/youtube-brands-solid.svg" alt="youtube"
+            /></a>
+            <a class="facebook" href="#"
+            ><img src="./../assets/icons/facebook-brands.svg" alt="facebook"
+            /></a>
+            <a class="instagram" href="#"
+            ><img src="./../assets/icons/instagram-brands-solid.svg" alt="instagram"
+            /></a>
+            <a class="tiktok" href="#"
+            ><img src="./../assets/icons/tiktok-brands-solid.svg" alt="tiktok"
+            /></a>
+            <a class="x" href="#"
+            ><img src="./../assets/icons/x-twitter-brands-solid.svg" alt="x"
+            /></a>
+        </div>
+        <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
+    </footer>
+
+    <script src="./../scripts/header-showmenu.js"></script>
 </body>
 </html>

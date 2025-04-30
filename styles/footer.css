@@ -1,0 +1,22 @@
+/* ----Footer---- */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: antiquewhite;
+    margin-top: 2%;
+}
+
+/* social media icons */
+footer a img {
+    margin: 1rem 0.5rem;
+    width: 1.8rem;
+}
+
+/* copyright text */
+footer .copyright {
+    margin-bottom: 1rem;
+}
+
