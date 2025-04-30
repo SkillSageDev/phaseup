@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary: #8b30c4;
+  --color-border-hover: #8b30c459;
+  --color-button-hover: #8b30c4cb;
+}
 /* *----Header---- */
 
 /* *main container */
@@ -30,7 +35,7 @@ header .container {
 }
 /* !!all buttons in header */
 header button {
-  border: #8b30c4 solid 0.1rem;
+  border: var(--color-primary) solid 0.1rem;
   border-radius: 0.25rem;
   cursor: pointer;
   padding: 0.5rem 1.2rem;
@@ -39,7 +44,7 @@ header button {
 
 /* !all buttons when you hover on it */
 header button:hover {
-  border: #8b30c459 solid 0.1rem;
+  border: var(--color-border-hover) solid 0.1rem;
   border-radius: 0.25rem;
   cursor: pointer;
   padding: 0.5rem 1.2rem;
@@ -68,17 +73,42 @@ header .explore img {
 /* *Search */
 /* ?search bar */
 .search {
+  display: flexbox;
+  width: 60%;
+  height: 100%;
+}
+
+/* ?search input and icon */
+.search-box {
   position: relative;
   display: flex;
   justify-content: start;
   align-items: center;
+  flex: 1;
+}
+
+/* ?results box appear when you search */
+.search-result {
+  position: absolute;
   width: 60%;
+  margin-top: 0.5rem;
+  background-color: #f1f1f1;
+  border-radius: 0.5rem;
+}
+
+/* ?the actual results */
+.search-result ul li{
+  list-style: none;
+  border-radius: 0.5rem;
+  background-color: #8b30c4;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
 /* ?search input */
 .search input {
   padding: 0.56rem 2rem;
-  border: #8b30c4 solid 0.1rem;
+  border: var(--color-primary) solid 0.1rem;
   border-radius: 1rem;
   outline: none;
   width: 100%;
@@ -91,7 +121,7 @@ header .explore img {
 
 /* ?search input focus */
 .search input:focus {
-  border: 0.13rem #8b30c4 solid;
+  border: 0.13rem var(--color-primary) solid;
   background-color: transparent;
 }
 
@@ -112,20 +142,20 @@ header .auth button {
 
 /* ?login button */
 header .auth .login {
-  color: #8b30c4;
+  color: var(--color-primary);
   font-weight: bold;
 }
 
 /* ?signup button */
 header .auth .signup {
-  background-color: #8b30c4;
+  background-color: var(--color-primary);
   color: white;
   font-weight: bold;
 }
 
 /* ?signup button hover */
 header .auth .signup:hover {
-  background-color: #8b30c4cb;
+  background-color: var(--color-button-hover);
 }
 
 /* *----Footer---- */
