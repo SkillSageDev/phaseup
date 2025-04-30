@@ -19,19 +19,32 @@ body
     src: url("\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
+#welcome
+{
+    padding-right: 100px;
+}
+#welcome >h1
+{
+    font-size: 30px;
+}
+#welcome >p
+{
+    font-size: 18px;
+}
+
 #background_sign
 {
     background-color: white;
     box-shadow: 0 0 1px #010F11;
     border-radius: 10px;
     width: 100vh;
-    height:45vh;
+    height:65vh;
     padding: 3% 0% 0% 2%;
     margin-top: 100px;
     display: grid;
 }
 
-#login_text
+#signup_text
 {
     font-size: 40px;
     font-weight: 600;

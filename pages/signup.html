@@ -4,8 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="stylesheet" href="login\signup.css">
 </head>
 <body>
-    
+    <div id="welcome">
+        <h1>Step up To The Next Level<br>With Phase Up.</h1>
+        <p>
+            We’re Very Exciting That’s You’re Here, Where <br>
+            Finding & Learning Courses Is Easy & Suitable For<br>
+            Everyone.
+        </p>
+    </div>
+    <div id="background_sign">
+
+        <form id="signup_form">
+
+            <div id="signup_text">Sign up</div>
+
+
+            <div id="username">
+                <div style="margin-top: 10px;">Username</div>
+                <div id="username_bar" class="bar">
+                    <span>
+                        <img src="login\User.svg" alt="no image">
+                        <hr>
+                    </span>
+                    <input type="text" id="username_input" class="input" required>
+                </div>
+            </div>
+
+            <div id="email">
+                <div style="margin-top: 10px;">Email</div>
+                <div id="email_bar" class="bar">
+                    <span>
+                        <img src="login\E-mail.svg" alt="no image">
+                        <hr>
+                    </span>
+                    <input type="email" id="email_input" class="input" required>
+                </div>
+            </div>
+
+
+            <div id="password">
+                <div style="margin-top: 10px;">Password</div>
+                <div id="password_bar" class="bar">
+                    <span>
+                        <img src="login\Password.svg" alt="no image">
+                        <hr>
+                    </span>
+                    <input type="password" id="password_input" class="input" required>
+                </div>
+            </div>
+
+            <div id="confirm_password">
+                <div style="margin-top: 10px;">Confirm Password</div>
+                <div id="confirm_password_bar" class="bar">
+                    <span>
+                        <img src="login\Password.svg" alt="no image">
+                        <hr>
+                    </span>
+                    <input type="password" id="confirm_password_input" class="input" required>
+                </div>
+            </div>
+
+            <div id="submit">
+                <input  id="submit_btn" type="submit" value="Sign up" class="bar">
+            </div>
+
+
+            <div id="login" style="margin-top: 10px;">Already Have Account <a href="login.html" id="login_link" class="page_link">log in</a></div>
+
+
+        </form>
+        <script src="login\signup.js"></script>
+    </div>
 </body>
 </html>
