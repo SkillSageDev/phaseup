@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.7.2-web/css/all.css">
     <title>Home</title>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="./assets/images/Logo.svg" alt="logo" />
-      </div>
-      <div class="explore">
-        <!-- ! needs some modification -->
-        <button>
-          <span>Explore</span> <img src="./assets/icons/angle-down-solid.svg" />
-        </button>
-      </div>
-      <form action="" class="search">
-        <input type="search" name="search" id="search" />
-        <button>Search</button>
-      </form>
-      <div class="auth">
-        <button class="login">Login</button>
-        <button class="signup">Sign up</button>
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="./assets/images/Logo.svg" alt="logo" /></a>
+        </div>
+        <div class="explore">
+          <!-- ! needs some modification -->
+          <button>
+            <span>Explore</span>
+            <img src="./assets/icons/angle-down-solid.svg" />
+          </button>
+        </div>
+        <form action="" class="search">
+          <input
+            type="search"
+            name="search"
+            placeholder="Looking for something?"
+            id="search"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="auth">
+          <button class="login">Login</button>
+          <button class="signup">Sign up</button>
+        </div>
       </div>
     </header>
 

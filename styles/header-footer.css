@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* *----Header---- */
+
+/* *main container */
+header {
+  height: max-content;
+  width: 100%;
+}
+
+/* ?everything inside the header */
+header .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fdfdfd;
+  padding: 0.5rem 0;
+}
+
+/* ?logo */
+.logo img {
+  position: relative;
+  top: 0.1rem;
+  width: 3.5rem;
+  cursor: pointer;
+}
+/* !!all buttons in header */
+header button {
+  border: #8b30c4 solid 0.1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+}
+
+/* !all buttons when you hover on it */
+header button:hover {
+  border: #8b30c459 solid 0.1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* *Explore Button */
+/* ?arrow in explore btn */
+header .explore {
+  display: flex;
+  position: relative;
+}
+
+/* ?Explore text */
+header .explore span {
+  display: flexbox;
+}
+
+/* ?arrow */
+header .explore img {
+  position: relative;
+  top: 0.2rem;
+  width: 0.8rem;
+}
+
+/* *Search */
+/* ?search bar */
+.search {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 60%;
+}
+
+/* ?search input */
+.search input {
+  padding: 0.56rem 2rem;
+  border: #8b30c4 solid 0.1rem;
+  border-radius: 1rem;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+}
+/* ?search input hover */
+.search input:hover {
+  background-color: rgba(0, 0, 0, 0.025);
+}
+
+/* ?search input focus */
+.search input:focus {
+  border: 0.13rem #8b30c4 solid;
+  background-color: transparent;
+}
+
+/* ?search icon */
+.search i {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.5);
+  left: 0.8rem;
+  pointer-events: none;
+}
+
+/* *login and sign up */
+
+/* ?login/signup button */
+header .auth button {
+  width: 5.6rem;
+}
+
+/* ?login button */
+header .auth .login {
+  color: #8b30c4;
+  font-weight: bold;
+}
+
+/* ?signup button */
+header .auth .signup {
+  background-color: #8b30c4;
+  color: white;
+  font-weight: bold;
+}
+
+/* ?signup button hover */
+header .auth .signup:hover {
+  background-color: #8b30c4cb;
+}
+
+/* *----Footer---- */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+/* !all social media icons */
+footer a img {
+  margin: 1rem 0.5rem;
+  width: 1.8rem;
+}
+
+/* *copyright text */
+footer .copyright {
+  margin-bottom: 1rem;
+}
