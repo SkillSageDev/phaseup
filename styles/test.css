@@ -7,9 +7,9 @@
 
 .card-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-content: center;
   gap: 1rem;
-  width: fit-content;
   margin: 0 auto;
   background-color: antiquewhite;
 }
@@ -42,7 +42,7 @@
 }
 
 .card__description {
-    font-size:medium;
+  font-size: medium;
 }
 
 .card__info {

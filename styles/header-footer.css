@@ -53,7 +53,7 @@ header button:hover {
 }
 
 header .auth a {
-  width: 6rem;
+  width: 6.2rem;
   border: var(--color-primary) solid 0.1rem;
   border-radius: 0.25rem;
   padding: 0.5rem 1.411rem;
@@ -69,7 +69,6 @@ header .auth a:hover {
   background-color: rgba(139, 48, 196, 0.05);
   border: var(--color-border-hover) solid 0.1rem;
 }
-
 
 /* *Explore Button */
 /* ?arrow and explore btn */
@@ -204,7 +203,7 @@ footer .copyright {
   margin-bottom: 1rem;
 }
 
-.menu{
+.menu {
   display: none;
 }
 
@@ -250,7 +249,7 @@ footer .copyright {
     opacity: 1;
     transition:
       opacity 0.1s,
-      transform .4s;
+      transform 0.4s;
   }
   header .fa-close {
     opacity: 0;
@@ -291,7 +290,11 @@ footer .copyright {
     cursor: pointer;
 
     display: block; /* or block */
-    background: linear-gradient(to left, rgba(250, 235, 215, 0.05) 50%, rgba(139, 48, 196, 0.25) 50%);
+    background: linear-gradient(
+      to left,
+      rgba(250, 235, 215, 0.05) 50%,
+      rgba(139, 48, 196, 0.25) 50%
+    );
     background-size: 200% 100%;
     background-position: right;
     transition: background-position 0.3s ease;
@@ -300,7 +303,7 @@ footer .copyright {
   header .menu .section {
     list-style: none;
     padding: 0.8rem 1rem;
-    
+
     margin: 1rem 0 0 0.5rem;
     font-family: var(--font-poppins-regular);
     font-weight: bolder;
@@ -318,7 +321,7 @@ footer .copyright {
     background-position: left;
     transition: background-position 0.35s ease-in;
   }
-/* 
+  /* 
   header .menu .section:hover {
     background-color: rgba(0, 0, 0, 0);
     cursor: default;
@@ -333,13 +336,13 @@ footer .copyright {
     cursor: pointer;
   }
 
-  .show-icon .fa-bars{
+  .show-icon .fa-bars {
     opacity: 0;
-    transform:rotate(90deg);
+    transform: rotate(90deg);
   }
 
-  .show-icon .fa-close{
+  .show-icon .fa-close {
     opacity: 1;
-    transform:rotate(90deg);
+    transform: rotate(90deg);
   }
 }
