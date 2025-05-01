@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    #intro {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', () => {
+    const intro = document.getElementById('intro');
+    const content = document.getElementById('main-content');
+
+    intro.style.opacity = '0';
+
+    setTimeout(() => {
+      intro.remove(); // or use `display: none;`
+      content.style.display = 'block';
+    }, 500); // matches the transition duration
+  });
+  </script>
+  <div id="intro">
+    <h1 class="logo">Loading...</h1>
+  </div>
+
+  <div id="main-content" style="display: none;">
+    <!-- Your actual page content -->
+    <header>
+      <div class="container">
+        <div class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-close"></i>
+        </div>
+        <div class="logo">
+          <a href="./index.html"><img src="./assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
+        </div>
+        <div class="explore">
+          <!-- ! needs some modification -->
+          <button>
+            <span>Explore</span>
+            <img src="./assets/icons/angle-down-solid.svg" />
+          </button>
+        </div>
+        <form action="" class="search">
+          <div class="search-box">
+            <input
+              type="text"
+              name="search"
+              placeholder="Looking for something?"
+              id="search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <!-- <div class="search-result">
+            <ul>
+              <li>Javascript</li>
+              <li>Javascript</li>
+            </ul>
+          </div> -->
+        </form>
+        <div class="auth">
+          <a href="./pages/login.html" class="login">Login</a>
+          <a href="./pages/signup.html" class="signup">Sign up</a>
+          <!-- <button class="login">Login</button> -->
+          <!-- <button class="signup">Sign up</button> -->
+        </div>
+
+        <!-- ----Hamberger Menu---- -->
+      </div>
+      <div class="menu" id="menu">
+        <ul>
+          <li><a href="./pages/login.html" class="element">Log in</a></li>
+          <li><a href="./pages/signup.html" class="element">Sign up</a></li>
+          <li class="section"><span>Most popular</span></li>
+          <li><a href="#" class="element">Business</a></li>
+          <li><a href="#" class="element">Software</a></li>
+        </ul>
+      </div>
+    </header>
+
+  <main>
+      <div id="welcome">
+          <h1>Welcome to PhaseUp</h1>
+          <h2>Your path to mastering all subjects</h2>
+          
+      </div>
+      <!-- Favorite line -->
+      <p class="lineTitle">Favorite</p>
+      <div class="aligner">
+          <div class="courseGrid">
+              <div class="courseCard">
+                  <div class="courseBanner">
+                      <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+                  </div>
+                  <div class="courseDescription">
+                      <br/>
+                      <div class="container">
+                          <p>Learn HTML in 4 Hours</p>
+                          <p>Elzero Web School</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="courseCard">
+                  <div class="courseBanner">
+                      <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                  </div>
+                  <div class="courseDescription">
+                      <br/>
+                      <div class="container">
+                          <p>كورس بايثون من الصفر</p>
+                          <p>أكاديمية ترميز</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="courseCard">
+                  <div class="courseBanner">
+                      <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                  </div>
+                  <div class="courseDescription">
+                      <br/>
+                      <div class="container">
+                          <p>Learn C# for Beginners</p>
+                          <p>Harvard Academy</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="courseCard">
+                  <div class="courseBanner">
+                      <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+                  </div>
+                  <div class="courseDescription">
+                      <br/>
+                      <div class="container">
+                          <p>Unreal Engine 1</p>
+                          <p>Elzero Web School</p>
+                      </div>
+                  </div>
+              </div>        
+          </div>
+      </div>
+
+      <!-- Currently Watching line (enrolled courses) -->
+      <p class="lineTitle">Watching</p>
+      <div class="courseGrid">
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Unreal Engine 1</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn C# for Beginners</p>
+                      <p>Harvard Academy</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>كورس بايثون من الصفر</p>
+                      <p>أكاديمية ترميز</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn HTML in 4 Hours</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>        
+      </div>
+      <!-- Trending -->
+      <p class="lineTitle">Trending</p>
+      <div class="courseGrid">
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn HTML in 4 Hours</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>كورس بايثون من الصفر</p>
+                      <p>أكاديمية ترميز</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn C# for Beginners</p>
+                      <p>Harvard Academy</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Unreal Engine 1</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>        
+      </div>
+      <!-- Newly Added -->
+      <p class="lineTitle">Newly Added</p>
+      <div class="courseGrid">
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Unreal Engine 1</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn C# for Beginners</p>
+                      <p>Harvard Academy</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>كورس بايثون من الصفر</p>
+                      <p>أكاديمية ترميز</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="courseCard">
+              <div class="courseBanner">
+                  <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+              </div>
+              <div class="courseDescription">
+                  <br/>
+                  <div class="container">
+                      <p>Learn HTML in 4 Hours</p>
+                      <p>Elzero Web School</p>
+                  </div>
+              </div>
+          </div>        
+      </div>
+
+
+      <script src="./scripts/courseGrid.js"></script>
+      <script>
+
+      </script>
+  </main>
+
+  <!-- why does it change when I place tags properly?!!! -->
+  <footer>
+      <div class="social">
+          <a class="linkedin" href="#"
+          ><img src="./assets/icons/linkedin-brands.svg" alt="linkedin"
+          /></a>
+          <a class="youtube" href="#"
+          ><img src="./assets/icons/youtube-brands-solid.svg" alt="youtube"
+          /></a>
+          <a class="facebook" href="#"
+          ><img src="./assets/icons/facebook-brands.svg" alt="facebook"
+          /></a>
+          <a class="instagram" href="#"
+          ><img src="./assets/icons/instagram-brands-solid.svg" alt="instagram"
+          /></a>
+          <a class="tiktok" href="#"
+          ><img src="./assets/icons/tiktok-brands-solid.svg" alt="tiktok"
+          /></a>
+          <a class="x" href="#"
+          ><img src="./assets/icons/x-twitter-brands-solid.svg" alt="x"
+          /></a>
+      </div>
+      <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
+  </footer>
+
+</div>
+<script src="./scripts/header-showmenu.js"></script>
+</body>
+</html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./styles/header-footer.css" />
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./styles/intro.css">
 
     <style>
         /* 
@@ -28,8 +29,7 @@
             justify-content: center;
             background: linear-gradient(to bottom, #E3E1E9, #fff);
             /* extends the gradient beyond its width */
-            margin-left: -20%;
-            margin-right: -20%;
+            margin: 0 -4.3%;
         }
 
         main > #welcome h1 {
@@ -52,6 +52,15 @@
     </style>
 </head>
 <body>
+    <div id="intro">
+        <div class="curtain">
+            <div class="curtain__black"></div>
+            <div class="curtain__gradient"></div>
+        </div>
+        <i class="intro__logo"></i>
+        <p>PhaseUp</p>
+    </div>
+
     <header>
         <div class="container">
           <div class="hamburger" id="hamburger">
@@ -334,13 +343,6 @@
                 </div>
             </div>        
         </div>
-
-
-        <script src="./scripts/courseGrid.js"></script>
-        <script src="./scripts/headerNav.js"></script>
-        <script>
-
-        </script>
     </main>
 
     <!-- why does it change when I place tags properly?!!! -->
@@ -368,6 +370,8 @@
         <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
     </footer>
 
+    <script src="./scripts/courseGrid.js"></script>
+    <script src="./scripts/intro.js"></script>
     <script src="./scripts/header-showmenu.js"></script>
 </body>
 </html>

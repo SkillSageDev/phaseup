@@ -1,7 +1,7 @@
 /* 
     Improvements: fix shifting of paragraphs inside divs when breaking into more lines
                   margin down not working in courseDescription
-                  not aligning center on big screens
+                  improve media query
 */
 main {
     margin: 0 4%;
