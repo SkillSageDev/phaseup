@@ -37,10 +37,10 @@ body
     background-color: white;
     box-shadow: 0 0 1px #010F11;
     border-radius: 10px;
-    width: 100vh;
-    height:65vh;
-    padding: 3% 0% 0% 2%;
-    margin-top: 100px;
+    width: 50%;
+    height:100%;
+    padding: 3% 0% 1% 2%;
+    margin-top: 8%;
     display: grid;
 }
 
@@ -63,7 +63,9 @@ body
     display: flex;
     flex-direction: row;
     padding-left: 50px;
-    padding: 0 20px 0 10px;
+    padding: 5px 20px 0 10px;
+    width: 30px;
+    height: 30px;
 }
 .bar >span >hr
 {
@@ -109,7 +111,26 @@ body
 }
 
 
+@media (max-width: 841px)
+{
+body
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
 
+#background_sign
+{
+    margin-top: 2%;
+    width: 90%;
+    height: 80%;
+}
+#welcome
+{
+    padding-right: 0px;
+}
+}
 
 
 
