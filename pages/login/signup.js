@@ -10,15 +10,17 @@ function valid_username()
     {
         return true;
     }
+    alert("username Must be more than 2 characters");
     return false;
 }
 function valid_email()
 {
     const checker = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if(checker.test(email))
+    if(checker.test(email.value))
     {
         return true;
     }
+    alert("Wrong email");
     return false;
 }
 function valid_password()
@@ -27,6 +29,7 @@ function valid_password()
         {
             return true;
         }
+        alert("password Must be more than 7 characters");
         return false;
 }
 function valid_confirm_password()
@@ -35,6 +38,7 @@ function valid_confirm_password()
     {
         return true;
     }
+    alert("confirm password doesn't match with password");
     return false;
 }
 
@@ -43,27 +47,10 @@ signup.addEventListener("submit",(e) =>
         const valid = valid_username() && valid_email() && valid_password() && valid_confirm_password()
         if(valid)
         {
-            document.write("You May Enter");
+            document.writeln("You May Enter");
         }
         else
         {
             e.preventDefault();
-            if (valid_username == false)
-            {
-                alert("username must be more than 2 characters");
-            }
-            else if(valid_email)
-            {
-                alert("wrong email");
-            }
-            else if (valid_password)
-            {
-                alert("wrong password");
-            }
-            else
-            {
-                alert("the confirm password & password doesn't match");
-            }
         }
-    
     })
