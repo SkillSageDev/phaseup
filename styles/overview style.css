@@ -145,6 +145,9 @@
   height: 500px;
   overflow: auto;
 }
+.course_episodes a {
+  text-decoration: none;
+}
 
 .course_elements {
   display: flex;
