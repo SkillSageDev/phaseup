@@ -12,7 +12,229 @@ the page that describes the user details. has a logout button
     <link rel="stylesheet" href="./../styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./../styles/header-footer.css" />
     <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
- </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+    background-color: #f8fafc;
+      }
+      .container {
+          display: flex;
+          margin: 50px 10px ;
+      }
+      .profile {
+      flex: 1 ;
+      margin-right: 10px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px ;
+      border-radius: 5px;
+      height: max-content;
+      }
+
+      .profile-header {
+          display: flex ;
+          margin-left: 15px;
+      }
+
+      .profile-img {
+          width: 60px;
+          height: 60px;
+          border-radius: 10px;
+          margin: 10px;
+      }
+
+      .profile-text-container{
+          line-height: 0.5 ;
+      }
+
+      .profile-title{
+          font-family: "poppins" ,sans-serif;
+          font-size: 20px;
+      }
+
+      .profile-email{
+          font-family: "poppins" ,sans-serif;
+          font-size: 20px;
+      }
+
+      .menu{
+          margin: 0 20px;
+      }
+
+      .menu-link{
+        display: block;
+        text-decoration: none;
+          color: #768499 ;
+          font-family: "poppins" ,sans-serif;
+          padding: 10px;
+          margin: 10px;
+          border-radius: 10px;
+      }
+
+      .menu-icon{
+          margin-right: 10px;
+      }
+
+      .menu-link:first-child{
+          color: #fff;
+          background-color:#536dfe ;
+      }
+
+      .menu-link:hover{
+          background-color: #f1f5f9;
+          color:#1e293b ;
+      }
+
+      .menu-link:first-child:hover{
+          background-color:#536dfe ;
+          color: #fff;
+      }
+
+      .account{
+          flex: 2;
+          margin-left: 10px;
+          background-color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          border-radius: 5px;
+          height: max-content;
+      }
+
+      .account-header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          border-bottom: 1px solid #768499;
+      }
+
+      .account-title {
+          font-family: "poppins" ,sans-serif;
+          font-size: 20px; 
+          color: #1e293b;
+          font-weight: 500;
+          margin-left: 10px;
+      }
+
+      .btn-container{
+          margin-right: 5px ;
+      }
+
+      .btn-cancel{
+          width: 8em;
+          height: 3em;
+          cursor: pointer;
+          border: 1px solid #768499;
+          border-radius: 2em;
+          color: #1e293b;
+          font-weight: bold;
+          margin-right: 5px;
+          background-color: #fff;
+          transform-origin: 0.3s;
+          box-shadow:rgba(0, 0, 0, 0.16) ;
+      }
+
+
+      .btn-cancel:hover{
+          background-color: #f1f5f9;
+      }
+
+      .btn-save {
+          width: 8em;
+          height: 3em;
+          cursor: pointer;
+          border: 1px solid #768499;
+          border-radius: 2em;
+          color: #fff;
+          font-weight: bold;
+          margin-left: 5px;
+          background-color: #536dfe;
+          transform-origin: 0.3s;
+          box-shadow:rgba(0, 0, 0, 0.16) ;
+      }
+
+      .btn-save:hover {
+          background-color: #4053c9 ;
+      }
+
+      .account-edit {
+          display: flex;
+          justify-content: space-between;
+          margin: 15px 0;
+      }
+
+      .input-container {
+          width: 100% ;
+          display: flex;
+          flex-direction: column;
+          margin: 0px 20px;
+      }
+
+      .input-container label {
+          font-family: "poppins" ,sans-serif;
+          color: #768499;
+          font-size: 14px ;
+      }
+
+      .input-container input {
+          height: 25px;
+          border: 1.5px solid #768499;
+          border-radius: 5px;
+          padding: 5px;
+          color: #768499;
+          font-family: "poppins" ,sans-serif;
+      }
+
+      .input-container input:focus {
+          outline: none;
+          border: 1.5px solid #536dfe;
+      }
+
+      .input-container textarea {
+          display: block;
+          width: 100%;
+          height: 100px;
+          padding: 5px;
+          border: 1.5px solid #768499;
+          border-radius: 5px;
+          font-family: "poppins" ,sans-serif;
+          color: #768499;
+      }
+      .input-container textarea:focus {
+          outline: none;
+          border: 1.5px solid #536dfe;
+      }
+
+      @media screen and (max-width: 768px) {
+          .container{
+              flex-direction: column;
+          }
+          .profile {
+            margin-bottom: 20px;
+            margin-right: 0; 
+          }
+      .account {
+          margin: 0;
+      }
+      .account-header {
+          flex-direction: column;
+      }
+      .account-edit {
+          flex-direction: column;
+          margin: 10px;
+      }
+      .input-container {
+          margin: 10px;
+      }
+      .input-container input {
+          margin-right: 10px ;
+      }
+      .input-container textarea {
+          display: block;
+          width: auto;
+          margin-right: 10px;
+      }
+      }
+    </style>
+</head>
 <body>
     <header>
         <div class="container">
@@ -66,7 +288,64 @@ the page that describes the user details. has a logout button
       </header>
     
     <main>
+      <div class="container">
+        <div class="profile">
+            <div class="profile-header">
+                <img src="" alt="profile"
+                class="profile-img" /> 
+                <div class="profile-text-container">
+                    <h1 class="profile-title">moomen</h1>
+                    <p class="profile-title">moomen.2005@yahoo.com</p>
+                </div>
+            </div>
+        <div class="menu">
+            <a href="#" class="menu-link"><i class="fa-solid 
+                fa-circle-user menu-icon"></i>Account</a>
+                <a href="#" class="menu-link"><i class="fa-solid 
+                    fa-bell menu-icon"></i>Notification</a>
+                    <a href="#" class="menu-link"><i class="fa-solid 
+                        fa-gear menu-icon"></i> setting</a>
+                        <a href="#" class="menu-link"><i class="fa-solid 
+                            fa-right-from-bracket menu-icon"></i> Logout</a>
+        </div>      
+          </div>
+          <form class="account"> 
+              <div class="account-header">
+                  <h1 class="account-title">Account setting</h1>
+                  <div class="btn-container">
+                      <button class="btn-cancel">cancel</button>
+                      <button class="btn-save">Save</button>   
+                  </div>
+              </div>
+              <div class="account-edit">
+                  <div class="input-container">
+                      <label>First Name</label>
+                      <input type="text" placeholder="First Name">
+                      <div class="input-container">
+                          <label>Last Name</label>
+                          <input type="text" placeholder="Last Name">
+                  </div>
+              </div>
 
+              <div class="account-edit">
+                  <div class="input-container">
+                      <label>Email</label>
+                      <input type="email" placeholder="Email">
+                      <div class="input-container">
+                          <label>Phone Number</label>
+                          <input type="text" placeholder="Phone Number">
+                  </div>
+              </div> 
+
+              <div class="account-edit">
+              
+                      <div class="input-container">
+                          <label>Address</label>
+                      <textarea placeholder="Address"></textarea>
+                  </div>
+              </div>
+          </form>
+      </div>
     </main>
 
     <footer>

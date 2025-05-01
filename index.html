@@ -12,16 +12,16 @@
 
     <style>
         /* 
-            features: add box shadow
-                      improve welcome board
+            features: improve welcome board
                       login & user icon js
         */
         .lineTitle {
             font-size: 20pt;
             font-weight: bold;
+            margin: 1rem 0;
         }
 
-        main #welcome {
+        main > #welcome {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,6 +30,14 @@
             /* extends the gradient beyond its width */
             margin-left: -20%;
             margin-right: -20%;
+        }
+
+        main > #welcome h1 {
+            margin: 2rem 0 1rem 0;
+        }
+
+        main > #welcome h2 {
+            margin: 0 0 2rem 0;
         }
     </style>
 </head>
@@ -41,7 +49,7 @@
             <i class="fa fa-close"></i>
           </div>
           <div class="logo">
-            <a href="#"><img src="./assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
+            <a href="./index.html"><img src="./assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
           </div>
           <div class="explore">
             <!-- ! needs some modification -->
@@ -68,19 +76,21 @@
             </div> -->
           </form>
           <div class="auth">
-            <button class="login">Login</button>
-            <button class="signup">Sign up</button>
+            <a href="./pages/login.html" class="login">Login</a>
+            <a href="./pages/signup.html" class="signup">Sign up</a>
+            <!-- <button class="login">Login</button> -->
+            <!-- <button class="signup">Sign up</button> -->
           </div>
   
           <!-- ----Hamberger Menu---- -->
         </div>
         <div class="menu" id="menu">
           <ul>
-            <li><a href="#">Log in</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="./pages/login.html" class="element">Log in</a></li>
+            <li><a href="./pages/signup.html" class="element">Sign up</a></li>
             <li class="section"><span>Most popular</span></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Software</a></li>
+            <li><a href="#" class="element">Business</a></li>
+            <li><a href="#" class="element">Software</a></li>
           </ul>
         </div>
       </header>
@@ -89,62 +99,66 @@
         <div id="welcome">
             <h1>Welcome to PhaseUp</h1>
             <h2>Your path to mastering all subjects</h2>
+            
         </div>
         <!-- Favorite line -->
         <p class="lineTitle">Favorite</p>
-        <div class="courseGrid">
-            <div class="courseCard">
-                <div class="courseBanner">
-                    <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
-                </div>
-                <div class="courseDescription">
-                    <br/>
-                    <div class="container">
-                        <p>Learn HTML in 4 Hours</p>
-                        <p>Elzero Web School</p>
+        <div class="aligner">
+            <div class="courseGrid">
+                <div class="courseCard">
+                    <div class="courseBanner">
+                        <img src="./assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="Course">
+                    </div>
+                    <div class="courseDescription">
+                        <br/>
+                        <div class="container">
+                            <p>Learn HTML in 4 Hours</p>
+                            <p>Elzero Web School</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="courseCard">
-                <div class="courseBanner">
-                    <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
-                </div>
-                <div class="courseDescription">
-                    <br/>
-                    <div class="container">
-                        <p>كورس بايثون من الصفر</p>
-                        <p>أكاديمية ترميز</p>
+                <div class="courseCard">
+                    <div class="courseBanner">
+                        <img src="./assets/course banners/كورس بايثون 1.svg" alt="Course">
+                    </div>
+                    <div class="courseDescription">
+                        <br/>
+                        <div class="container">
+                            <p>كورس بايثون من الصفر</p>
+                            <p>أكاديمية ترميز</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="courseCard">
-                <div class="courseBanner">
-                    <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
-                </div>
-                <div class="courseDescription">
-                    <br/>
-                    <div class="container">
-                        <p>Learn C# for Beginners</p>
-                        <p>Harvard Academy</p>
+                <div class="courseCard">
+                    <div class="courseBanner">
+                        <img src="./assets/course banners/Csharp course 2.svg" alt="Course">
+                    </div>
+                    <div class="courseDescription">
+                        <br/>
+                        <div class="container">
+                            <p>Learn C# for Beginners</p>
+                            <p>Harvard Academy</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="courseCard">
-                <div class="courseBanner">
-                    <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
-                </div>
-                <div class="courseDescription">
-                    <br/>
-                    <div class="container">
-                        <p>Unreal Engine 1</p>
-                        <p>Elzero Web School</p>
+                <div class="courseCard">
+                    <div class="courseBanner">
+                        <img src="./assets/course banners/Unreal Engine 1.svg" alt="Course">
                     </div>
-                </div>
-            </div>        
+                    <div class="courseDescription">
+                        <br/>
+                        <div class="container">
+                            <p>Unreal Engine 1</p>
+                            <p>Elzero Web School</p>
+                        </div>
+                    </div>
+                </div>        
+            </div>
         </div>
+
         <!-- Currently Watching line (enrolled courses) -->
         <p class="lineTitle">Watching</p>
         <div class="courseGrid">
