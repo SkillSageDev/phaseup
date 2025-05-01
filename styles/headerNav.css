@@ -1,0 +1,73 @@
+/* 
+    improvements: make margin to body
+                  make payment methods in buttons instead of divs
+                  put payment methods in a horizontal grid
+                  make icons not disappear when minimizing the width
+                  make 2 styles: web app for mobile & a normal web for desktop
+    divide&conquer: put a header > nav css in a separate file (file for each component for future use)
+    problems: inclined in home only for some reason
+              home is not necessary (and icons are not necessary XD)
+*/
+
+body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header > nav {
+    width: 100%;
+    height: 10%;
+    margin: 0%;
+    padding: 0%;
+    background-color: #f1f1f1;
+}
+
+header > nav > ul{
+    margin: 0 4%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-block: 0;
+    padding-inline: 0;
+    /* height: 3rem; */
+}
+
+header > nav > ul > li {
+    margin: 0.2%;
+}
+
+header > nav > ul > li  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aquamarine; */
+    margin: 0%;
+    padding: 0%;
+}
+
+#logo  img{
+    /* width: 60%; */
+    width: 5rem;
+    height: auto;
+}
+
+#user_icon  img{
+    /* width: 30%; */
+    width: 4rem;
+    height: auto;
+}
+
+header > nav  a {
+    text-decoration: none;
+    color: black;
+}
+
+header > nav a:hover {
+    cursor: pointer;
+}
+
+
