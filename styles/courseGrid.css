@@ -10,15 +10,15 @@ main {
 .courseGrid {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-wrap: wrap;
     gap: 1%;
 }
 
 .courseGrid .courseCard {
-    /* width: 350px; */
-    width: 300px;
+    width: 350px;
+    /* width: 300px; */
     height: auto;
     margin: 2%;
     cursor: pointer;
@@ -57,9 +57,112 @@ main {
 }
 
 
-@media (max-width: 585px) {
+@media (max-width: 1878px) {
+    .courseGrid .courseCard {
+        margin: 6%;
+    }
+}
+
+@media (max-width: 1840px) {
     .courseGrid .courseCard {
         margin: 5%;
     }
 }
 
+@media (max-width: 1678px) {
+    .courseGrid .courseCard {
+        margin: 4%;
+    }
+}
+
+@media (max-width: 1542px) {
+    .courseGrid .courseCard {
+        margin: 3%;
+    }
+}
+
+@media (max-width: 1426px) {
+    .courseGrid .courseCard {
+        margin: 2%;
+    }
+}
+
+@media (max-width: 1240px) {
+    .courseGrid .courseCard {
+        margin: 6%;
+    }
+}
+
+@media (max-width: 1072px) {
+    .courseGrid .courseCard {
+        margin: 6%;
+        width: 300px;
+    }
+}
+
+@media (max-width: 1014px) {
+    .courseGrid .courseCard {
+        margin: 5%;
+    }
+}
+
+@media (max-width: 963px) {
+    .courseGrid .courseCard {
+        margin: 4%;
+    }
+}
+
+@media (max-width: 916px) {
+    .courseGrid .courseCard {
+        margin: 3%;
+    }
+}
+
+@media (max-width: 874px) {
+    .courseGrid .courseCard {
+        margin: 2%;
+    }
+}
+
+
+@media (max-width: 836px) {
+    .courseGrid .courseCard {
+        margin: 1%;
+    }
+}
+
+@media (max-width: 800px) {
+    .courseGrid .courseCard {
+        margin: 4%;
+        width: 300px;
+    }
+}
+
+@media (max-width: 785px) {
+    .courseGrid .courseCard {
+        margin: 3%;
+    }
+}
+
+@media (max-width: 749px) {
+    .courseGrid .courseCard {
+        margin: 2%;
+    }
+}
+
+@media (max-width: 716px) {
+    .courseGrid .courseCard {
+        margin: 1%;
+    }
+}
+
+@media (max-width: 686px) {
+    .courseGrid {
+        justify-content: center;
+    }
+
+    .courseGrid .courseCard {
+        width: 350px;
+        margin: 5%;
+    }
+}
