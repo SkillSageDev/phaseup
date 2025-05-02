@@ -8,4 +8,7 @@ cards.forEach(card => {
     card.addEventListener("mouseleave", () => {
         card.style.cssText = "transform: translateY(0); transition: all 0.3s ease-out; color: black";
     });
+    card.addEventListener("click", () => {
+        window.location.href = "./pages/overview.html";
+    });
 });

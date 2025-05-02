@@ -63,10 +63,6 @@ footer {
         transform: scale(0.8);
         opacity: 0;
     }
-/* 
-    20% {
-        transform: scale(0.9);
-    } */
 
     40% {
         transform: scale(0.65);

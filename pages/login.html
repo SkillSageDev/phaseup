@@ -7,50 +7,47 @@
     <title>Login</title>
 </head>
 <body>
-
+    
     <div id="background_sign">
-
+        
         <form id="login_form">
 
             <div id="login_text">Log in</div>
-
-
+            
+            
             <div id="info">
                 <div style="margin-top: 10px;">Username or Email</div>
                 <div id="info_bar" class="bar">
                     <span>
-                        <img src="./../assets/login/User.svg" alt="no image">
-                        <hr>
+                        <img src="./../assets/icons/login/User.svg" alt="no image">
                     </span>
                     <input type="text" id="info_input" class="input" required>
                 </div>
             </div>
-
-
+            
+            
             <div id="password">
                 <div style="margin-top: 10px;">Password</div>
                 <div id="password_bar" class="bar">
                     <span>
-                        <img src="./../assets/login/Password.svg" alt="no image">
-                        <hr>
+                        <img src="./../assets/icons/login/Password.svg" alt="no image">
                     </span>
                     <input type="password" id="password_input" class="input" required>
                 </div>
             </div>
-
-
-            <div id="reset_password" style="margin-top: 10px;"><a href="./resetPassword.html" id="reset_password_link" class="page_link">Forget Password?</a></div>
-
+            
+            <!--<div id="reset_password" style="margin-top: 10px;">Forget Password? <a href="#" id="reset_password_link" class="page_link">reset Password</a></div>-->
 
             <div id="submit">
                 <input  id="submit_btn" type="submit" value="Log in" class="bar">
             </div>
+            
 
-
-            <div id="signup" style="margin-top: 10px;">New to PhaseUp? <a href="./signup.html" id="signup_link" class="page_link">Sign up!</a></div>
-
-
+            <div id="signup" style="margin-top: 10px;">Don't have acoount ? <a href="./signup.html" id="signup_link" class="page_link">Sign up</a></div>
+            
+            
         </form>
+        <script src="./../scripts/login.js"></script>
     </div>
     
 </body>

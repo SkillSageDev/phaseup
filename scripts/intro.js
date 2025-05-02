@@ -36,7 +36,7 @@ window.addEventListener("load", () => {
     
     // 4. rocket launch the logo
     timer = 1;
-    delay += 600;
+    delay += 620;
     setTimeout( () => {
         logo.style.cssText = `animation: rocket_launch ${timer}s ease forwards`;
     
@@ -57,6 +57,7 @@ window.addEventListener("load", () => {
             element.style.display = 'block';
             // element.style.cssText = "display: block; transition: display 1s ease";
         });
+        content.footer.style.display = "flex";
     }, delay);
 
 });

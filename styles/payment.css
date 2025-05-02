@@ -1,0 +1,58 @@
+main{
+    height: 50rem;
+}
+
+main > section a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 5rem;
+    padding: 1.5rem 4rem;
+    border: 1px solid #0D0850;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    color: #0D0850;
+    font-size: 20pt;
+    transition: all 0.2s ease-out;
+}
+
+main > section a:hover {
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: #0D0850;
+    padding: 1.7rem 4.5rem;
+    transition: all 0.2s ease-out;
+}
+
+#payment_method {
+    /* background-color: aqua; */
+    margin: 0% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+@media (max-width: 800px) {
+  main > section a {
+    margin: 5% 1%;
+  }
+}
+
+@media (max-width: 600px) {
+  main > section a {
+    margin: 5% 1%;
+    padding: 1rem 3rem;
+    font-size: 18pt;
+  }
+}
+
+@media (max-width: 585px) {
+  main > section a {
+    padding: 1.5rem 4rem;
+    font-size: 20pt;
+  }
+
+  #payment_method {
+    flex-direction: column;
+  }
+}

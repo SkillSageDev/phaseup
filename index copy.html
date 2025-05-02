@@ -4,26 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="./styles/courseGrid.css" />
     <link rel="stylesheet" href="./styles/core/global.css" />
     <link rel="stylesheet" href="./styles/fonts/poppins.css" />
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./styles/test.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    <!-- <link rel="stylesheet" href="./styles/intro.css" /> -->
     <script src="./scripts/add-course.js" defer></script>
+
+    <style>
+      /* 
+            features: improve welcome board
+                      login & user icon js
+        */
+      .lineTitle {
+        font-size: 20pt;
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+
+      main > #welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #e3e1e9, #fff);
+        /* extends the gradient beyond its width */
+        margin-left: -20%;
+        margin-right: -20%;
+      }
+
+      main > #welcome h1 {
+        margin: 2rem 0 1rem 0;
+      }
+
+      main > #welcome h2 {
+        margin: 0 0 2rem 0;
+      }
+
+      @media (max-width: 585px) {
+        main > #welcome h1 {
+          font-size: 20pt;
+        }
+
+        main > #welcome h2 {
+          font-size: 12pt;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- to stop animation: comment intro.css link -->
-    <!-- <div id="intro">
-      <div class="curtain">
-          <div class="curtain__black"></div>
-          <div class="curtain__gradient"></div>
-      </div>
-      <i class="intro__logo"></i>
-      <p>PhaseUp</p>
-    </div> -->
-
     <header>
       <div class="container">
         <div class="hamburger" id="hamburger">
@@ -99,8 +129,12 @@
       <p class="lineTitle">Newly Added</p>
       <ul class="card-list"></ul>
 
+      <script src="./scripts/courseGrid.js"></script>
+      <script src="./scripts/headerNav.js"></script>
+      <script></script>
     </main>
 
+    <!-- why does it change when I place tags properly?!!! -->
     <footer>
       <div class="social">
         <a class="linkedin" href="#"
@@ -125,11 +159,6 @@
       <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
     </footer>
 
-    <!-- <script src="./scripts/intro.js"></script> -->
     <script src="./scripts/header-showmenu.js"></script>
-    <script>
-      // let el = document.querySelector('footer');
-      // console.log(getComputedStyle(el).display);
-    </script>
   </body>
 </html>
