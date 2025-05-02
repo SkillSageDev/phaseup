@@ -1,4 +1,5 @@
 let cardList = document.querySelector(".card-list");
+
 fetch("/pages/components/header.html")
   .then((response) => response.text())
   .then((html) => {
@@ -19,8 +20,16 @@ fetch("/pages/components/header.html")
     let cardList = document.querySelector(".course-list");
     console.log(cardList);
     cardList.innerHTML = addCourse(obj);
+
+    let searchResult = document.querySelector(
+      ".container__course-list__result"
+    );
+
+    filter();
+
     if (window.location.pathname.includes("browse.html")) {
       searchInput.addEventListener("input", () => {
+        searchResult.innerHTML = `Results for "${searchInput.value}"`;
         cardList.innerHTML = searchCourse(searchInput.value);
       });
     } else {
@@ -35,6 +44,7 @@ let obj = [
     title: "c# for .NET Developers",
     description:
       "Master C# Programming from A to Z. Dive deep into .NET, OOP, Clean Code, LINQ, WPF, Generics, Unit Testing, and more.",
+    category: ["Game", "English"],
     hours: "10h",
     link: "#",
   },
@@ -44,6 +54,7 @@ let obj = [
     title: "Learn HTML in 4 Hours",
     description:
       "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+    category: ["Web", "Arabic"],
     hours: "4h",
     link: "#",
   },
@@ -53,6 +64,7 @@ let obj = [
     title: "Python for Data Science, AI & Development",
     description:
       "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+    category: ["Data Science", "English"],
     hours: "56h 21m",
     link: "#",
   },
@@ -62,6 +74,7 @@ let obj = [
     title: "Unreal Engine Fundamentals",
     description:
       "Code Your First Four Game Projects in Unreal Engine 5 with Blueprint Visual Scripting - From Beginner to Advanced!",
+    category: ["Game", "English"],
     hours: "41h 26m",
     link: "#",
   },
@@ -72,14 +85,16 @@ function searchCourse(text) {
     obj.filter(
       (el) =>
         el.title.includes(text) ||
-        el.title.toLowerCase().includes(text.toLowerCase())
+        el.title.toLowerCase().includes(text.toLowerCase()) ||
+        filter()
     )
   );
 }
 
 function addCourse(arr) {
-  return arr.map((obj) => {
-    return `<li class="card-list__item">
+  return arr
+    .map((obj) => {
+      return `<li class="card-list__item">
             <div class="card">
               <img
                 src="${obj.image}"
@@ -91,6 +106,9 @@ function addCourse(arr) {
                 <p class="card__description">
                   ${obj.description}
                 </p>
+                <div class="card__category">
+                  ${obj.category.map((el) => `<span>${el}</span>`).join("")}
+                </div>
               </div>
               <div class="card__info">
                 <span><i class="fa fa-clock"></i>${obj.hours}</span>
@@ -98,5 +116,27 @@ function addCourse(arr) {
               </div>
             </div>
           </li>`;
-  }).join("");
+    })
+    .join("");
+}
+
+function filter() {
+  let checkboxInput = document.querySelectorAll(
+    ".container__filters__checkbox input"
+  );
+
+  let selectedCategories = [];
+
+  checkboxInput.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        selectedCategories.push(checkbox.nextSibling.textContent);
+        console.log(selectedCategories);
+      }
+    });
+  });
+
+  return obj.filter((el) =>
+    el.category.some((el) => selectedCategories.includes(el))
+  );
 }

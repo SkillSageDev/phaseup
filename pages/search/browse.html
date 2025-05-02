@@ -1,61 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browse</title>
     <!-- ----Styles---- -->
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/styles/core/global.css">
-    <link rel="stylesheet" href="/styles/fonts/poppins.css">
-    <link rel="stylesheet" href="/styles/header-footer.css">
-    <link rel="stylesheet" href="/styles/test.css">
-    <link rel="stylesheet" href="/styles/search/browse.css">
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/styles/core/global.css" />
+    <link rel="stylesheet" href="/styles/fonts/poppins.css" />
+    <link rel="stylesheet" href="/styles/header-footer.css" />
+    <link rel="stylesheet" href="/styles/course-card.css" />
+    <link rel="stylesheet" href="/styles/search/browse.css" />
+
     <!-- ----Scripts---- -->
+    <script src="./../../scripts/header-showmenu.js" defer></script>
     <script src="/scripts/components/load-header.js"></script>
     <!-- <script src="/scripts/search/search-course.js" defer></script> -->
-</head>
-<body>
+  </head>
+  <body>
     <header class="site-header"></header>
-    <div class="container">
-        <div class="container__filters">
-            <h3 class="container__filters__title">
-                Filter By
-            </h3>
-            <h4 class="container__filters__subtitle">Subject</h4>
-            <select name="filter-subject" id="filter-subject">
-                <option value="">Data Science</option>
-                <option value="">Cybersecurity</option>
-                <option value="">Computer Science</option>
-            </select>
 
-            <h4 class="container__filters__subtitle">Language</h4>
-            <select name="filter-language" id="filter-language">
-                <option value="">Arabic</option>
-                <option value="">English</option>
-            </select>
+    <div class="container">
+      <div class="container__filters">
+        <h3 class="container__filters__head">Filter By</h3>
+
+        <div class="container__filters__checkbox">
+          <h4>Subject</h4>
+          <label for="data-science-checkbox"
+            ><input
+              type="checkbox"
+              name="data-science-checkbox"
+              id="data-science-checkbox"
+              data-category= "Data Science"
+            />Data Science</label
+          >
+        
+          <label for="game-checkbox"
+            ><input
+              type="checkbox"
+              name="game-checkbox"
+              id="game-checkbox"
+              data-category= "Game"
+            />Game</label
+          >
+
+          <label for="web-checkbox"
+          ><input
+            type="checkbox"
+            name="web-checkbox"
+            id="web-checkbox"
+            data-category= "Web"
+          />Web</label
+        >
         </div>
-        <ul class="course-list">
-            <li class="card-list__item">
-                <div class="card">
-                  <img
-                    src="${obj.image}"
-                    alt="${obj.alt}"
-                    class="card__image"
-                  />
-                  <div class="card__content">
-                    <h3 class="card__title">${obj.title}</h3>
-                    <p class="card__description">
-                      ${obj.description}
-                    </p>
-                  </div>
-                  <div class="card__info">
-                    <span><i class="fa fa-clock"></i>${obj.hours}</span>
-                    <a href="${obj.link}">Learn more</a>
-                  </div>
-                </div>
-              </li>
-        </ul>
+
+        <div class="container__filters__checkbox">
+          <h4>Language</h4>
+          <label for="arabic-checkbox"
+            ><input
+              type="checkbox"
+              name="arabic-checkbox"
+              id="arabic-checkbox"
+              data-category= "Arabic"
+            />Arabic</label
+          >
+          <label for="english-checkbox"
+            ><input
+              type="checkbox"
+              name="english-checkbox"
+              id="english-checkbox"
+              data-category= "English"
+            />English</label
+          >
+        </div>
+      </div>
+
+      <div class="container__course-list">
+        <h3 class="container__course-list__result">
+          <span>Result for "${input.value}"</span>
+        </h3>
+        <div><ul class="course-list"></ul></div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

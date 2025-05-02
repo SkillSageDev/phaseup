@@ -37,6 +37,11 @@ let obj = [
   },
 ];
 
+let array = [1,2,3,4]
+
+let list = array.map((el) => el * 2)
+
+console.log(list.join(""))
 function addCourse(arr) {
   return arr.map((obj) => {
     return `<li class="card-list__item">
@@ -61,4 +66,6 @@ function addCourse(arr) {
   }).join("");
 }
 let cardList = document.querySelectorAll(".card-list");
+
+console.log(cardList)
 cardList.forEach((list) => (list.innerHTML = addCourse(obj)));

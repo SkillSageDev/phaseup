@@ -6,3 +6,7 @@
     /* Font Variables */
     --font-poppins: "Poppins", sans-serif;
   }
+h1{
+  font-family: var(--font-poppins);
+  font-weight: 700;
+}
