@@ -60,8 +60,5 @@ function addCourse(arr) {
       </li>`;
   }).join("");
 }
-
-console.log(addCourse(obj));
-
 let cardList = document.querySelectorAll(".card-list");
 cardList.forEach((list) => (list.innerHTML = addCourse(obj)));
