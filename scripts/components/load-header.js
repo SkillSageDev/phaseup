@@ -33,6 +33,11 @@ fetch("/pages/components/header.html")
         cardList.innerHTML = searchCourse(searchInput.value);
       });
     } else {
+      searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        window.location.assign("/pages/search/browse.html");
+        console.log("here");
+      });
     }
   });
 
@@ -85,8 +90,7 @@ function searchCourse(text) {
     obj.filter(
       (el) =>
         el.title.includes(text) ||
-        el.title.toLowerCase().includes(text.toLowerCase()) ||
-        filter()
+        el.title.toLowerCase().includes(text.toLowerCase())
     )
   );
 }
