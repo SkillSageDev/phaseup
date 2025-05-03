@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,13 +14,14 @@
 
     <!-- <script src="./scripts/components/load-header.js"></script> -->
     <script src="./scripts/add-course.js" defer></script>
+    <script src="./scripts/search/index-search.js" defer></script>
   </head>
   <body>
     <!-- to stop animation: comment intro.css link -->
     <div id="intro">
       <div class="curtain">
-          <div class="curtain__black"></div>
-          <div class="curtain__gradient"></div>
+        <div class="curtain__black"></div>
+        <div class="curtain__gradient"></div>
       </div>
       <i class="intro__logo"></i>
       <p>PhaseUp</p>
@@ -51,6 +52,7 @@
               name="search"
               placeholder="Looking for something?"
               id="search"
+              class="search-input"
             />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -100,7 +102,6 @@
       <!-- Newly Added -->
       <p class="lineTitle">Newly Added</p>
       <ul class="card-list"></ul>
-
     </main>
 
     <footer>

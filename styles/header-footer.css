@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-poppins-regular);
+  font-family: var(--font-poppins);
 }
 
 /* *----Header---- */
@@ -302,7 +302,7 @@ footer .copyright {
     padding: 0.8rem 1rem;
     
     margin: 1rem 0 0 0.5rem;
-    font-family: var(--font-poppins-regular);
+    font-family: var(--font-poppins);
     font-weight: bolder;
     color: gray;
   }

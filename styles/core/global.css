@@ -4,24 +4,6 @@
     --color-button-hover: #8b30c4cb;
   
     /* Font Variables */
-    --font-poppins-thin: "Poppins", sans-serif;
-    --font-poppins-extralight: "Poppins", sans-serif;
-    --font-poppins-light: "Poppins", sans-serif;
-    --font-poppins-regular: "Poppins", sans-serif;
-    --font-poppins-medium: "Poppins", sans-serif;
-    --font-poppins-semibold: "Poppins", sans-serif;
-    --font-poppins-bold: "Poppins", sans-serif;
-    --font-poppins-extrabold: "Poppins", sans-serif;
-    --font-poppins-black: "Poppins", sans-serif;
-  
-    /* Italics */
-    --font-poppins-thin-italic: "Poppins", sans-serif;
-    --font-poppins-extralight-italic: "Poppins", sans-serif;
-    --font-poppins-light-italic: "Poppins", sans-serif;
-    --font-poppins-regular-italic: "Poppins", sans-serif;
-    --font-poppins-medium-italic: "Poppins", sans-serif;
-    --font-poppins-semibold-italic: "Poppins", sans-serif;
-    --font-poppins-bold-italic: "Poppins", sans-serif;
-    --font-poppins-extrabold-italic: "Poppins", sans-serif;
-    --font-poppins-black-italic: "Poppins", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
   }
