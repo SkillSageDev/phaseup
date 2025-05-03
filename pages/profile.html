@@ -43,7 +43,11 @@ the page that describes the user details. has a logout button
       }
 
       .profile-text-container{
-          line-height: 0.5 ;
+          /* line-height: 0.5; */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: left;
       }
 
       .profile-title{
@@ -56,11 +60,11 @@ the page that describes the user details. has a logout button
           font-size: 20px;
       }
 
-      .menu{
+      .profile_menu{
           margin: 0 20px;
       }
 
-      .menu-link{
+      .profile_menu-link{
         display: block;
         text-decoration: none;
           color: #768499 ;
@@ -70,21 +74,21 @@ the page that describes the user details. has a logout button
           border-radius: 10px;
       }
 
-      .menu-icon{
+      .profile_menu-icon{
           margin-right: 10px;
       }
 
-      .menu-link:first-child{
+      .profile_menu-link:first-child{
           color: #fff;
           background-color:#536dfe ;
       }
 
-      .menu-link:hover{
+      .profile_menu-link:hover{
           background-color: #f1f5f9;
           color:#1e293b ;
       }
 
-      .menu-link:first-child:hover{
+      .profile_menu-link:first-child:hover{
           background-color:#536dfe ;
           color: #fff;
       }
@@ -291,23 +295,23 @@ the page that describes the user details. has a logout button
       <div class="container">
         <div class="profile">
             <div class="profile-header">
-                <img src="" alt="profile"
+                <img src="./../assets/icons/figma-cons/user icon.svg" alt="profile"
                 class="profile-img" /> 
                 <div class="profile-text-container">
                     <h1 class="profile-title">moomen</h1>
                     <p class="profile-title">moomen.2005@yahoo.com</p>
                 </div>
             </div>
-        <div class="menu">
-            <a href="#" class="menu-link"><i class="fa-solid 
-                fa-circle-user menu-icon"></i>Account</a>
+            <div class="profile_menu">
                 <a href="#" class="menu-link"><i class="fa-solid 
-                    fa-bell menu-icon"></i>Notification</a>
+                    fa-circle-user menu-icon"></i>Account</a>
                     <a href="#" class="menu-link"><i class="fa-solid 
-                        fa-gear menu-icon"></i> setting</a>
+                        fa-bell menu-icon"></i>Notification</a>
                         <a href="#" class="menu-link"><i class="fa-solid 
-                            fa-right-from-bracket menu-icon"></i> Logout</a>
-        </div>      
+                            fa-gear menu-icon"></i> setting</a>
+                            <a href="#" class="menu-link"><i class="fa-solid 
+                                fa-right-from-bracket menu-icon"></i> Logout</a>
+            </div>      
           </div>
           <form class="account"> 
               <div class="account-header">
