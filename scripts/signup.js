@@ -44,13 +44,10 @@ function valid_confirm_password()
 
 signup.addEventListener("submit",(e) =>
     {
+        e.preventDefault();
         const valid = valid_username() && valid_email() && valid_password() && valid_confirm_password()
         if(valid)
         {
-            document.writeln("You May Enter");
-        }
-        else
-        {
-            e.preventDefault();
+            window.location.href = "./../index.html"
         }
     })

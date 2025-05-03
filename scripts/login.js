@@ -22,14 +22,14 @@ function valid_password()
 login.addEventListener("submit",(e) =>
 {
     const valid = valid_info() && valid_password();
+    e.preventDefault();
     if(valid)
     {
-        document.write("You May Enter");
+        window.location.href = "../index.html"
     }
     else
     {
         alert("invalid username or password");
-        e.preventDefault();
     }
 
 })
