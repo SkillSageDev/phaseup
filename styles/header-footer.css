@@ -160,8 +160,8 @@ header .auth {
   gap: 0.25rem;
 }
 
-header .auth button {
-  width: 6rem;
+header .auth a {
+  width: 6.2rem;
 }
 
 /* ?login button */
