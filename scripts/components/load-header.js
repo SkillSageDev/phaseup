@@ -19,15 +19,23 @@ fetch("/pages/components/header.html")
 
     let cardList = document.querySelector(".course-list");
     console.log(cardList);
-    cardList.innerHTML = addCourse(obj);
 
     let searchResult = document.querySelector(
       ".container__course-list__result"
     );
 
-    filter();
-
+    let searchHistory = window.localStorage.getItem("search");
     if (window.location.pathname.includes("browse.html")) {
+      if (window.localStorage.getItem("search")) {
+        searchResult.innerHTML = `Results for "${window.localStorage.getItem(
+          "search"
+        )}"`;
+        searchInput.value = window.localStorage.getItem("search");
+        cardList.innerHTML = searchCourse(
+          window.localStorage.getItem("search")
+        );
+        window.localStorage.clear();
+      }
       searchInput.addEventListener("input", () => {
         searchResult.innerHTML = `Results for "${searchInput.value}"`;
         cardList.innerHTML = searchCourse(searchInput.value);
@@ -35,8 +43,8 @@ fetch("/pages/components/header.html")
     } else {
       searchForm.addEventListener("submit", (e) => {
         e.preventDefault();
+        window.localStorage.setItem("search", searchInput.value);
         window.location.assign("/pages/search/browse.html");
-        console.log("here");
       });
     }
   });
