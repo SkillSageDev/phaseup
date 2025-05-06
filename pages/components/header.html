@@ -8,60 +8,81 @@
     <link rel="stylesheet" href="/styles/fonts/poppins.css" />
     <link rel="stylesheet" href="/assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="/styles/header-footer.css" />
+    <link rel="stylesheet" href="./header.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="hamburger" id="hamburger">
-          <i class="fa fa-bars"></i>
-          <i class="fa fa-close"></i>
+    <header class="site-header">
+      <div class="site-header__container">
+        <div class="site-header__hamburger-wrapper" id="hamburger">
+          <i class="site-header__hamburger-icon fa fa-bars"></i>
+          <i class="site-header__close-icon fa fa-close"></i>
         </div>
-        <div class="logo">
-          <a href="/index.html"
-            ><img src="/assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo"
-          /></a>
-        </div>
-        <div class="explore">
-          <!-- ! needs some modification -->
-          <button>
-            <span>Explore</span>
-            <img src="/assets/icons/angle-down-solid.svg" />
-          </button>
-        </div>
-        <form action="" class="search">
-          <div class="search-box">
+        <a href="/index.html" class="site-header__logo-wrapper"
+          ><img
+            class="site-header__logo"
+            src="/assets/icons/figma-cons/PhaseUp Logo.svg"
+            alt="logo"
+        /></a>
+        <button class="explore-button btn--secondary">
+          <span class="explore-button__text">Explore</span>
+          <img
+            class="explore-button__arrow-icon"
+            src="/assets/icons/angle-down-solid.svg"
+          />
+        </button>
+        <form action="" class="site-search">
+          <div class="site-search__wrapper">
             <input
               type="text"
               name="search"
               placeholder="Looking for something?"
-              class="search-input"
+              class="site-search__input"
               id="search"
             />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="site-search__icon fa-solid fa-magnifying-glass"></i>
           </div>
-          <!-- <div class="search-result">
-                <ul>
-                  <li>Javascript</li>
-                  <li>Javascript</li>
-                </ul>
-              </div> -->
+          <div class="site-search-result__wrapper">
+            <ul class="site-search-result__list">
+              <li class="site-search-result__item">Javascript</li>
+              <li class="site-search-result__item">Javascript</li>
+            </ul>
+          </div>
         </form>
-        <div class="auth">
-          <a href="/pages/login.html" class="login">Login</a>
-          <a href="/pages/signup.html" class="signup">Sign up</a>
-          <!-- <button class="login">Login</button> -->
-          <!-- <button class="signup">Sign up</button> -->
-        </div>
 
-        <!-- ----Hamberger Menu---- -->
+        <div class="site-auth-buttons">
+          <a
+            class="site-auth-buttons__login-button btn--secondary"
+            href="/pages/login.html"
+            class="login"
+            >Login</a
+          >
+          <a
+            class="site-auth-buttons__signup-button btn--primary"
+            href="/pages/signup.html"
+            class="signup"
+            >Sign up</a
+          >
+        </div>
       </div>
-      <div class="menu" id="menu">
-        <ul>
-          <li><a href="/pages/login.html" class="element">Log in</a></li>
-          <li><a href="/pages/signup.html" class="element">Sign up</a></li>
-          <li class="section"><span>Most popular</span></li>
-          <li><a href="#" class="element">Business</a></li>
-          <li><a href="#" class="element">Software</a></li>
+      <div class="hamburger-menu" id="menu">
+        <ul class="hamburger-menu__list">
+          <li class="hamburger-menu__item">
+            <a href="/pages/login.html" class="hamburger-menu__link">Log in</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="/pages/signup.html" class="hamburger-menu__link">Sign up</a>
+          </li>
+          <li
+            class="hamburger-menu__item"
+          >
+            <span class="hamburger-menu__section">Most popular</span>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Business</a>
+          </li>
+          <li class="hamburger-menu__item">
+            <a href="#" class="hamburger-menu__link">Software</a>
+          </li>
         </ul>
       </div>
     </header>
