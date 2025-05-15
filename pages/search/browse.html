@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse</title>
+    <!-- ----Styles---- -->
+    <link rel="stylesheet" href="./../../assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./../../styles/core/global.css" />
+    <link rel="stylesheet" href="./../../styles/fonts/poppins.css" />
+    <link rel="stylesheet" href="./../../styles/header-footer.css" />
+    <link rel="stylesheet" href="./../../styles/course-card.css" />
+    <link rel="stylesheet" href="./../../styles/browse.css" />
+
+    <!-- ----Scripts---- -->
+    <!-- <script src="./../../scripts/header-showmenu.js" defer></script> -->
+    <script src="./../../scripts/search/browse-search.js" defer></script>
+    <!-- <script src="./../../scripts/components/load-header.js"></script> -->
+    <!-- <script src="./../../scripts/search/search-course.js" defer></script> -->
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-close"></i>
+        </div>
+        <div class="logo">
+          <a href="./../../index.html"
+            ><img src="./../../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo"
+          /></a>
+        </div>
+        <div class="explore">
+          <!-- ! needs some modification -->
+          <button>
+            <span>Explore</span>
+            <img src="./../../assets/icons/angle-down-solid.svg" />
+          </button>
+        </div>
+        <form action="" class="search">
+          <div class="search-box">
+            <input
+              type="text"
+              name="search"
+              placeholder="Looking for something?"
+              id="search"
+              class="search-input"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <!-- <div class="search-result">
+              <ul>
+                <li>Javascript</li>
+                <li>Javascript</li>
+              </ul>
+            </div> -->
+        </form>
+        <div class="auth">
+          <a href="./../../pages/login.html" class="login">Login</a>
+          <a href="./../../pages/signup.html" class="signup">Sign up</a>
+          <!-- <button class="login">Login</button> -->
+          <!-- <button class="signup">Sign up</button> -->
+        </div>
+
+        <!-- ----Hamberger Menu---- -->
+      </div>
+      <div class="menu" id="menu">
+        <ul>
+          <li><a href="./../../pages/login.html" class="element">Log in</a></li>
+          <li><a href="./../../pages/signup.html" class="element">Sign up</a></li>
+          <li class="section"><span>Most popular</span></li>
+          <li><a href="#" class="element">Business</a></li>
+          <li><a href="#" class="element">Software</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="container__filters">
+        <h3 class="container__filters__head">Filter By</h3>
+
+        <div class="container__filters__checkbox">
+          <h4>Subject</h4>
+          <label for="data-science-checkbox"
+            ><input
+              type="checkbox"
+              name="data-science-checkbox"
+              id="data-science-checkbox"
+              data-category="Data Science"
+            />Data Science</label
+          >
+
+          <label for="game-checkbox"
+            ><input
+              type="checkbox"
+              name="game-checkbox"
+              id="game-checkbox"
+              data-category="Game"
+            />Game</label
+          >
+
+          <label for="web-checkbox"
+            ><input
+              type="checkbox"
+              name="web-checkbox"
+              id="web-checkbox"
+              data-category="Web"
+            />Web</label
+          >
+        </div>
+
+        <div class="container__filters__checkbox">
+          <h4>Language</h4>
+          <label for="arabic-checkbox"
+            ><input
+              type="checkbox"
+              name="arabic-checkbox"
+              id="arabic-checkbox"
+              data-category="Arabic"
+            />Arabic</label
+          >
+          <label for="english-checkbox"
+            ><input
+              type="checkbox"
+              name="english-checkbox"
+              id="english-checkbox"
+              data-category="English"
+            />English</label
+          >
+        </div>
+      </div>
+
+      <div class="container__course-list">
+        <h3 class="container__course-list__result">
+          <span>Result for "${input.value}"</span>
+        </h3>
+        <div><ul class="course-list"></ul></div>
+      </div>
+    </div>
+  </body>
+</html>

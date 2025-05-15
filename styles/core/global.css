@@ -1,0 +1,9 @@
+:root {
+    --color-primary: #8b30c4;
+    --color-border-hover: #8b30c459;
+    --color-button-hover: #8b30c4cb;
+  
+    /* Font Variables */
+    --font-poppins: "Poppins", sans-serif;
+
+  }

@@ -1,0 +1,158 @@
+body
+{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    color: #010F11 ;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@font-face
+{
+    font-family: 'Montserrat';
+    src: url("\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+#background_sign
+{
+    background-color: white;
+    box-shadow: 0 0 1px #010F11;
+    border-radius: 10px;
+    width: 50%;
+    height:100%;
+    padding: 3% 0% 1% 2%;
+    margin-top: 11%;
+    display: grid;
+}
+
+#login_text
+{
+    font-size: 40px;
+    font-weight: 600;
+}
+.bar
+{
+    width: 95%;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.bar >span
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    padding: 5px 20px 0 10px;
+    width: 30px;
+    height: 30px;
+}
+.input
+{
+    width: 100%;
+    padding-left: 50px;
+    border-radius: 10px;
+    border: unset;
+    box-shadow: 0px 0px 1px #010F11 ;
+    outline: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+}
+.page_link
+{
+    color: #E86AE6;
+}
+.page_link:hover
+{
+    color: #f397f8ff;
+}
+#submit_btn
+{
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-size: 25px;
+    background-color: #E86AE6;
+    color: white;
+    border: unset;
+    box-shadow: 0px 0px 1px #010F11 ;
+    outline: none;
+}
+#submit_btn:hover
+{
+    background-color: #f397f8ff;
+}
+
+
+@media (max-width: 768px) {
+  
+    body {
+      font-size: 14px;
+    }
+  
+    #background_sign {
+      width: 70%;
+      margin-top: 10%;
+      padding: 5% 5% 3% 5%;
+    }
+  
+    #login_text {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+  
+    .bar {
+      height: 40px;
+      margin-top: 5px;
+    }
+  
+    .input {
+      font-size: 14px;
+      padding-left: 40px;
+    }
+  
+    #submit_btn {
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Media query for screens smaller than 480px (typical for mobile phones) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  
+    #background_sign {
+      width: 70%;
+      margin-top: 15%;
+      padding: 8% 8% 5% 8%;
+    }
+  
+    #login_text {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  
+    .bar {
+      height: 36px;
+      margin-top: 3px;
+    }
+  
+    .input {
+      font-size: 13px;
+      padding-left: 35px;
+    }
+  
+    #submit_btn {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  }
