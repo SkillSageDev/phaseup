@@ -5,6 +5,7 @@
 }
 .course-overview {
   background-color: #dbb5fe;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
 }
 .lectures-overview {
   display: flex;
@@ -18,9 +19,9 @@
   font-size: 70px;
 }
 #course-preview-image {
-  width: 70%;
-  align-self: flex-start;
-  /* height: 750px; */
+  width: 100%;
+  padding: 2%;
+  border-radius: 6%;
 }
 .instructor {
   display: flex;
@@ -34,10 +35,12 @@
   font-size: 40px;
   margin-right: auto;
   padding-left: 10px;
+  cursor: pointer;
 }
 #instructor-icon {
   width: 100px;
   border-radius: 100%;
+  cursor: pointer;
 }
 .course-length {
   display: flex;
@@ -77,6 +80,20 @@
 .course-lectures {
   width: 30%;
   display: flex;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+.course-lectures-list {
+  list-style-type: none;
+  width: 90%;
+  height: 600px;
+  background-color: #bc86ef;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+  padding: 5% 1%;
 }
 #lecture-bar-number {
   display: inline-block;
@@ -85,27 +102,32 @@
 }
 #lecture-bar-label {
   display: inline-block;
-  width: 70%;
+  width: 60%;
 }
 #lecture-bar-length {
   display: inline-block;
   width: 20%;
   text-align: end;
 }
-.course-lectures-list {
-  list-style-type: none;
-  width: 100%;
-  background-color: #bc86ef;
-  height: 750px;
-  overflow: auto;
+.course-description h1 {
+  width: 500px;
 }
 .list-lecture {
-  padding: 5px 5px;
   display: flex;
   align-items: center;
-  padding: 5%;
+  height: 50px;
   color: black;
 }
+.list-lecture div {
+  display: flex;
+  width: 100%;
+}
+.list-lecture:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
 .course-reviews {
   width: 60%;
   background-color: dbb5fe;
@@ -200,11 +222,11 @@ ul {
     font-size: 12px;
   }
   .course-description h1 {
-    font-size: 15px;
+    font-size: 20px;
   }
   .course-description p {
-    width: 300px;
-    font-size: 10px;
+    width: 500px;
+    font-size: 15px;
   }
   #lecture-bar-number {
     font-size: 8px;
@@ -293,6 +315,7 @@ ul {
   .course-lectures {
     justify-self: center;
     width: 250px;
+    border: none;
   }
   .course-lectures-list {
     width: 100%;
