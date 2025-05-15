@@ -1,108 +1,35 @@
-site-header{
+@import url(./button.css);
+@import url(./menu.css);
+@import url(./search-form.css);
+@import url(./menu.css);
+
+.header {
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.header__humburger-toggle {
+}
+
+.header__hamburger-icon {
+}
+
+.header__close-icon {
+}
+
+.header__logo-wrapper {
 
 }
 
-site-header__container{
-
+.header__logo {
+    position: relative;
+    width: 3.5rem;
 }
 
-site-header__humburger-wrapper{
-
-}
-
-site-header__hamburger-icon{
-
-}
-
-site-header__close-icon{
-
-}
-
-site-header__logo-wrapper{
-
-}
-
-site-header__logo{
-
-}
-
-explore-button{
-
-}
-
-explore-button__text{
-
-}
-
-explore-button__arrow-icon{
-
-}
-
-site-search{
-
-}
-
-site-search__wrapper{
-
-}
-
-site-search__input{
-
-}
-
-site-search__icon{
-
-}
-
-site-search-result__wrapper{
-
-}
-
-site-search-result__list{
-
-}
-
-site-search-result__item{
-
-}
-
-site-auth-buttons{
-
-}
-
-site-auth-buttons__login-button{
-
-}
-
-site-auth-buttons__signup-button{
-
-}
-
-hamburger-menu{
-
-}
-
-hamburger-menu__list{
-
-}
-
-hamburger-menu__item{
-
-}
-
-hamburger-menu__link{
-
-}
-
-hamburger-menu__section{
-
-}
-
-/* modifiers */
-btn--primary{
-
-}
-
-btn--secondary{
-
+.header__auth-buttons {
 }
