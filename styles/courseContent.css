@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #d8cee1;
+  margin-top: 1%;
+  display: flex;
+  justify-self: center;
+  width: 100%;
+  overflow: auto;
+}
+.episodes_container {
+  margin: 1% 1% 1% auto;
+  border-radius: 2%;
+  width: 20%;
+  height: 900px;
+  margin-left: auto;
+  background-color: #e3e1e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.episodes_container ul {
+  justify-items: center;
+  width: 70%;
+  padding-top: 5px;
+}
+.episode_box {
+  padding-top: 3%;
+  margin-top: 2%;
+  background-color: #d8cee1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 150px;
+  align-items: center;
+  border-radius: 3%;
+}
+.episode_image {
+  width: 90%;
+}
+.resize {
+  width: 100%;
+  height: auto;
+}
+.episode_title {
+  text-wrap: wrap;
+}
+.episode_image_preview {
+  margin: 30px 0px 0px 30px;
+  /* background-color: aquamarine; */
+  width: 700px;
+  height: 400px;
+}
+.episode_image_previeww {
+  margin-bottom: auto;
+}
+.completion_bar {
+  margin: 40px 0px 0px 30px;
+  width: 700px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #e3e1e9;
+  overflow: hidden;
+}
+.completion_percentage {
+  background-color: #8b30c4;
+  height: inherit;
+  width: 50%;
+  border-radius: inherit;
+}
+.completion_section p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.container .description_section {
+  margin: 35px 10px 0px;
+  width: 35%;
+}
+/* .description_section .episode_title{
+    
+} */
+.description_section .episode_description {
+  padding-top: 10px;
+  font-size: 30px;
+  width: 450px;
+}
+@media (max-width: 1600px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .completion_section p {
+    text-align: left;
+    margin-left: 5%;
+  }
+  .episodes_container {
+    margin: 0;
+  }
+  .episodes_container {
+    align-self: center;
+    width: 400px;
+    min-height: 7%;
+    overflow: auto;
+  }
+  .episode_box {
+    height: 200px;
+    margin: 0px 0px 10px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .episodes_container {
+    margin: 0;
+    width: 400px;
+  }
+  .completion_section p {
+    font-size: 25px;
+  }
+  .episodes_container {
+    align-self: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .description_section .episode_title {
+    font-size: 30px;
+    width: 600px;
+  }
+  .completion_section p {
+    font-size: 20px;
+  }
+  .episode_description {
+    font-size: 10px;
+    width: 500px;
+  }
+
+  .episodes_container {
+    align-self: center;
+    height: 1000px;
+  }
+  .episode_box .episode_title p {
+    font-size: 15px;
+  }
+}
