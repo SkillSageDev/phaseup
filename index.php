@@ -90,7 +90,33 @@
       </div>
       <!-- Favorite line -->
       <p class="lineTitle">Favorite</p>
-      <ul class="card-list"></ul>
+      <ul class="card-list">
+        <?php
+        include("./utility/sql_commands.php");
+        $cards = get_cards(); // Get all cards
+
+        // Loop through each card and display it
+        foreach ($cards as $card) {
+        ?>
+          <li class="card">
+            <img
+              src="<?php echo $card['image']; ?>"
+              alt="<?php echo $card['alt']; ?>"
+              class="card__image"
+            />
+            <div class="card__content">
+              <h3 class="card__title"><?php echo $card['title']; ?></h3>
+              <p class="card__description"><?php echo $card['description']; ?></p>
+            </div>
+            <div class="card__info">
+              <span><i class="fa fa-clock"></i><?php echo $card['hours']; ?></span>
+              <a href="<?php echo $card['link']; ?>">Learn more</a>
+            </div>
+          </li>
+        <?php
+        }
+        ?>
+      </ul>
       <!-- Currently Watching line (enrolled courses) -->
       <p class="lineTitle">Watching</p>
       <ul class="card-list"></ul>
