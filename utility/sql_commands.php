@@ -13,7 +13,7 @@ function get_cards() {
         die("Connection failed: " . mysqli_connect_error());
     }
     
-    $get_cards = "SELECT * FROM cards";
+    $get_cards = "SELECT * FROM cards;";
     $result = mysqli_query($connection, $get_cards);
 
     if (!$result) {
@@ -38,6 +38,7 @@ function get_cards() {
 
     return $cards; // Return the array containing all cards
 }
+
 
 /*
 $hostname = "localhost";

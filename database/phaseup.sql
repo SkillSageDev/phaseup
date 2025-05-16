@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 16, 2025 at 05:47 PM
+-- Host: 127.0.0.1
+-- Generation Time: May 16, 2025 at 06:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,10 +42,10 @@ CREATE TABLE `cards` (
 --
 
 INSERT INTO `cards` (`id`, `image`, `alt`, `title`, `description`, `hours`, `link`) VALUES
-(1, '/assets/course banners/Csharp course 2.svg', 'C#', 'C# for .NET Developers', 'Master C# Programming from A to Z. Dive deep into .NET, OOP, Clean Code, LINQ, WPF, Generics, Unit Testing, and more.', '10h', '/pages/overview/cs-overview.php'),
-(2, './assets/course banners/تعلم HTML في فيديو واحد 1.svg', 'javascript', 'Learn HTML in 4 Hours', 'The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!', '4h', '/pages/overview/html-overview.php'),
-(3, '/assets/course banners/كورس بايثون 1.svg', 'python', 'Python for Data Science, AI & Development', 'Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!', '56h 21m', '/pages/overview/python-overview.php'),
-(4, '/assets/course banners/Unreal Engine 1.svg', 'unreal', 'Unreal Engine Fundamentals', 'Code Your First Four Game Projects in Unreal Engine 5 with Blueprint Visual Scripting - From Beginner to Advanced!', '41h 26m', '/pages/overview/unreal-overview.php');
+(1, '/phaseup/assets/course banners/Csharp course 2.svg', 'C#', 'C# for .NET Developers', 'Master C# Programming from A to Z. Dive deep into .NET, OOP, Clean Code, LINQ, WPF, Generics, Unit Testing, and more.', '10h', '/phaseup/pages/overview/cs-overview.php'),
+(2, '/phaseup/assets/course banners/تعلم HTML في فيديو واحد 1.svg', 'javascript', 'Learn HTML in 4 Hours', 'The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!', '4h', '/phaseup/pages/overview/html-overview.php'),
+(3, '/phaseup/assets/course banners/كورس بايثون 1.svg', 'python', 'Python for Data Science, AI & Development', 'Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!', '56h 21m', '/phaseup/pages/overview/python-overview.php'),
+(4, '/phaseup/assets/course banners/Unreal Engine 1.svg', 'unreal', 'Unreal Engine Fundamentals', 'Code Your First Four Game Projects in Unreal Engine 5 with Blueprint Visual Scripting - From Beginner to Advanced!', '41h 26m', '/phaseup/pages/overview/unreal-overview.php');
 
 -- --------------------------------------------------------
 

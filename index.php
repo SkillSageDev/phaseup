@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/intro.css" />
 
     <!-- <script src="./scripts/components/load-header.js"></script> -->
-    <script src="./scripts/add-course.js" defer></script>
+    <!-- <script src="./scripts/add-course.js" defer></script> -->
     <script src="./scripts/search/index-search.js" defer></script>
   </head>
   <body>
@@ -94,23 +94,24 @@
         <?php
         include("./utility/sql_commands.php");
         $cards = get_cards(); // Get all cards
-
         // Loop through each card and display it
         foreach ($cards as $card) {
-        ?>
-          <li class="card">
-            <img
+          ?>
+          <li class="card-item">
+            <div class="card">
+              <img
               src="<?php echo $card['image']; ?>"
               alt="<?php echo $card['alt']; ?>"
               class="card__image"
-            />
-            <div class="card__content">
-              <h3 class="card__title"><?php echo $card['title']; ?></h3>
-              <p class="card__description"><?php echo $card['description']; ?></p>
-            </div>
-            <div class="card__info">
-              <span><i class="fa fa-clock"></i><?php echo $card['hours']; ?></span>
-              <a href="<?php echo $card['link']; ?>">Learn more</a>
+              />
+              <div class="card__content">
+                <h3 class="card__title"><?php echo $card['title']; ?></h3>
+                <p class="card__description"><?php echo $card['description']; ?></p>
+              </div>
+              <div class="card__info">
+                <span><i class="fa fa-clock"></i><?php echo $card['hours']; ?></span>
+                <a href="<?php echo $card['link']; ?>">Learn more</a>
+              </div>
             </div>
           </li>
         <?php

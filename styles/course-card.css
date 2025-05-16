@@ -14,9 +14,9 @@
   background-color: antiquewhite;
 }
 
-.card-list__item {
-  margin: 0 auto;
+.card-item {
   list-style: none;
+  margin: 0 auto;
 }
 
 .card {
