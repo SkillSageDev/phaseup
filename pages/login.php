@@ -43,7 +43,7 @@
             </div>
             
 
-            <div id="signup" style="margin-top: 10px;">Don't have acoount ? <a href="./signup.html" id="signup_link" class="page_link">Sign up</a></div>
+            <div id="signup" style="margin-top: 10px;">Don't have acoount ? <a href="./signup.php" id="signup_link" class="page_link">Sign up</a></div>
             
             
         </form>

@@ -16,7 +16,7 @@
           <i class="header__hamburger-icon fa fa-bars"></i>
           <i class="header__close-icon fa fa-close"></i>
         </div>
-        <a href="/index.html" class="header__logo-wrapper"
+        <a href="/index.php" class="header__logo-wrapper"
           ><img
             class="header__logo"
             src="/assets/icons/figma-cons/PhaseUp Logo.svg"
@@ -41,13 +41,13 @@
         <div class="auth-buttons">
           <a
             class="button button--secondary"
-            href="/pages/login.html"
+            href="/pages/login.php"
             class="login"
             >Login</a
           >
           <a
             class="button button--primary"
-            href="/pages/signup.html"
+            href="/pages/signup.php"
             class="signup"
             >Sign up</a
           >
@@ -56,10 +56,10 @@
       <div class="menu" id="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="/pages/login.html" class="menu__link">Log in</a>
+            <a href="/pages/login.php" class="menu__link">Log in</a>
           </li>
           <li class="menu__item">
-            <a href="/pages/signup.html" class="menu__link">Sign up</a>
+            <a href="/pages/signup.php" class="menu__link">Sign up</a>
           </li>
           <li class="menu__item">
             <span class="menu__section">Most popular</span>

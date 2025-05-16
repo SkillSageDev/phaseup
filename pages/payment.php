@@ -18,7 +18,7 @@
         <i class="fa fa-close"></i>
       </div>
       <div class="logo">
-        <a href="./../index.html"><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
+        <a href="./../index.php"><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
       </div>
       <div class="explore">
         <!-- ! needs some modification -->
@@ -45,8 +45,8 @@
         </div> -->
       </form>
       <div class="auth">
-        <a href="./login.html" class="login">Login</a>
-        <a href="./signup.html" class="signup">Sign up</a>
+        <a href="./login.php" class="login">Login</a>
+        <a href="./signup.php" class="signup">Sign up</a>
         <!-- <button class="login">Login</button> -->
         <!-- <button class="signup">Sign up</button> -->
       </div>
@@ -55,8 +55,8 @@
     </div>
     <div class="menu" id="menu">
       <ul>
-        <li><a href="./login.html" class="element">Log in</a></li>
-        <li><a href="./signup.html" class="element">Sign up</a></li>
+        <li><a href="./login.php" class="element">Log in</a></li>
+        <li><a href="./signup.php" class="element">Sign up</a></li>
         <li class="section"><span>Most popular</span></li>
         <li><a href="#" class="element">Business</a></li>
         <li><a href="#" class="element">Software</a></li>
@@ -68,8 +68,8 @@
         <section id="payment_options">
             <p style="margin: 2% 4%; font-weight: 700; font-size: 20pt;">Payment method:</p>
             <div id="payment_method">
-                <a href="./proceedPayment.html">Paypal</a>
-                <a href="./proceedPayment.html">Fawry</a>
+                <a href="./proceedPayment.php">Paypal</a>
+                <a href="./proceedPayment.php">Fawry</a>
             </div>
         </section>
     </main>

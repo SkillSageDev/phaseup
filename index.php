@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./styles/intro.css" />
 
     <!-- <script src="./scripts/components/load-header.js"></script> -->
-    <!-- <script src="./scripts/add-course.js" defer></script> -->
-    <script src="./scripts/search/index-search.js" defer></script>
+    <script src="/phaseup/scripts/add-course.js" defer></script>
+    <!-- <script src="./scripts/search/index-search.js" defer></script> -->
   </head>
   <body>
     <!-- to stop animation: comment intro.css link -->
@@ -34,7 +34,7 @@
           <i class="fa fa-close"></i>
         </div>
         <div class="logo">
-          <a href="./index.html"
+          <a href="./index.php"
             ><img src="./assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo"
           /></a>
         </div>
@@ -45,7 +45,7 @@
             <img src="./assets/icons/angle-down-solid.svg" />
           </button>
         </div>
-        <form action="" class="search">
+        <form action="/phaseup/pages/search/browse.php" class="search">
           <div class="search-box">
             <input
               type="text"
@@ -56,26 +56,18 @@
             />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <!-- <div class="search-result">
-              <ul>
-                <li>Javascript</li>
-                <li>Javascript</li>
-              </ul>
-            </div> -->
         </form>
         <div class="auth">
-          <a href="./pages/login.html" class="login">Login</a>
-          <a href="./pages/signup.html" class="signup">Sign up</a>
-          <!-- <button class="login">Login</button> -->
-          <!-- <button class="signup">Sign up</button> -->
+          <a href="./pages/login.php" class="login">Login</a>
+          <a href="./pages/signup.php" class="signup">Sign up</a>
         </div>
 
         <!-- ----Hamberger Menu---- -->
       </div>
       <div class="menu" id="menu">
         <ul>
-          <li><a href="./pages/login.html" class="element">Log in</a></li>
-          <li><a href="./pages/signup.html" class="element">Sign up</a></li>
+          <li><a href="./pages/login.php" class="element">Log in</a></li>
+          <li><a href="./pages/signup.php" class="element">Sign up</a></li>
           <li class="section"><span>Most popular</span></li>
           <li><a href="#" class="element">Business</a></li>
           <li><a href="#" class="element">Software</a></li>
@@ -92,12 +84,12 @@
       <p class="lineTitle">Favorite</p>
       <ul class="card-list">
         <?php
-        include("./utility/sql_commands.php");
+        include("/xampp/htdocs/phaseup/utility/sql_commands.php");
         $cards = get_cards(); // Get all cards
         // Loop through each card and display it
         foreach ($cards as $card) {
           ?>
-          <li class="card-item">
+          <li class="card-item"> // was card-list__item changed it in css too
             <div class="card">
               <img
               src="<?php echo $card['image']; ?>"
@@ -157,9 +149,5 @@
 
     <script src="./scripts/intro.js"></script>
     <script src="./scripts/header-showmenu.js"></script>
-    <script>
-      // let el = document.querySelector('footer');
-      // console.log(getComputedStyle(el).display);
-    </script>
   </body>
 </html>

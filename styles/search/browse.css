@@ -14,27 +14,6 @@
 .container__filters {
   width: 20%;
   background-color: aqua;
-}
-
-.course-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  justify-content: center;
-  gap: 1rem;
-  margin: 0 auto;
-  width: 80%;
-  background-color: blueviolet;
-}
-
-.container {
-  display: flex;
-  background: #ccc;
-  width: 100%;
-}
-
-.container__filters {
-  width: 20%;
-  background-color: aqua;
   padding: 2.5rem;
 }
 

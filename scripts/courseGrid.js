@@ -9,6 +9,6 @@ cards.forEach(card => {
         card.style.cssText = "transform: translateY(0); transition: all 0.3s ease-out; color: black";
     });
     card.addEventListener("click", () => {
-        window.location.href = "./pages/overview.html";
+        window.location.href = "./pages/overview.php";
     });
 });

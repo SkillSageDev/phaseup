@@ -20,7 +20,7 @@
             <i class="fa fa-close"></i>
           </div>
           <div class="logo">
-            <a href="./../index.html"
+            <a href="./../index.php"
               ><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo"
             /></a>
           </div>
@@ -49,8 +49,8 @@
               </div> -->
           </form>
           <div class="auth">
-            <a href="./login.html" class="login">Login</a>
-            <a href="./signup.html" class="signup">Sign up</a>
+            <a href="./login.php" class="login">Login</a>
+            <a href="./signup.php" class="signup">Sign up</a>
             <!-- <button class="login">Login</button> -->
             <!-- <button class="signup">Sign up</button> -->
           </div>
@@ -59,8 +59,8 @@
         </div>
         <div class="menu" id="menu">
           <ul>
-            <li><a href="./login.html" class="element">Log in</a></li>
-            <li><a href="./signup.html" class="element">Sign up</a></li>
+            <li><a href="./login.php" class="element">Log in</a></li>
+            <li><a href="./signup.php" class="element">Sign up</a></li>
             <li class="section"><span>Most popular</span></li>
             <li><a href="#" class="element">Business</a></li>
             <li><a href="#" class="element">Software</a></li>

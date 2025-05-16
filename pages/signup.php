@@ -71,7 +71,7 @@
             </div>
 
 
-            <div id="login" style="margin-top: 10px;">Already Have Account <a href="./login.html" id="login_link" class="page_link">log in</a></div>
+            <div id="login" style="margin-top: 10px;">Already Have Account <a href="./login.php" id="login_link" class="page_link">log in</a></div>
 
 
         </form>

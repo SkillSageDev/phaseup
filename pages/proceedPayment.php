@@ -70,7 +70,7 @@
         <h3>C# Course for Beginners</h3>
         <h2>$45.99</h2>
 
-        <a href="./course content.html">Proceed</a>
+        <a href="./course content.php">Proceed</a>
     </main>
 
     <footer>

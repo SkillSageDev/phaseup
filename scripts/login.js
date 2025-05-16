@@ -25,7 +25,7 @@ login.addEventListener("submit",(e) =>
     e.preventDefault();
     if(valid)
     {
-        window.location.href = "../index.html"
+        window.location.href = "../index.php"
     }
     else
     {

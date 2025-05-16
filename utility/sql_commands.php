@@ -25,15 +25,7 @@ function get_cards() {
 
     // Fetch all rows and store them in the $cards array
     while ($row = mysqli_fetch_array($result)) {
-        $cards[] = [
-            'id' => $row['id'],
-            'image' => $row['image'],
-            'alt' => $row['alt'],
-            'title' => $row['title'],
-            'description' => $row['description'],
-            'hours' => $row['hours'],
-            'link' => $row['link']
-        ];
+        $cards[] = $row;
     }
 
     return $cards; // Return the array containing all cards
