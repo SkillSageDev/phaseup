@@ -10,3 +10,12 @@ const showMenu = function (toggleId, navId) {
 };
 
 showMenu("hamburger", "menu");
+
+const check = document.getElementById("explorer");
+let nav = document.getElementById("menu");
+
+check.addEventListener("click", () => {
+  let currentDisplay = nav.style.display;
+  nav.style.display = (currentDisplay === "none")? "block":"none";
+
+});

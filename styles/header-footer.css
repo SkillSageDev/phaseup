@@ -111,7 +111,7 @@ header .explore img {
   position: absolute;
   width: 60%;
   margin-top: 0.5rem;
-  background-color: #f1f1f1;
+  background-color: #e3e1e9;
   border-radius: 0.5rem;
 }
 
@@ -190,13 +190,26 @@ footer {
   align-items: center;
   width: 100%;
   background-color: antiquewhite;
-  margin-top: 4rem;
 }
 
 /* !all social media icons */
-footer a img {
+
+footer a {
+  text-decoration: none;
+  color: transparent;
+}
+
+footer a svg {
   margin: 1rem 0.5rem;
   width: 1.8rem;
+  height: auto;
+  transition: all 0.2s ease-out;
+}
+
+footer a svg:hover {
+  fill: #8b30c4;
+  scale: 105%;
+  transition: all 0.3s ease-out;
 }
 
 /* *copyright text */
@@ -204,9 +217,53 @@ footer .copyright {
   margin-bottom: 1rem;
 }
 
-.menu{
+header .menu {
+  position: absolute;
+  display: block;
+  height: 10rem;
+  width: 100%;
+  left: 0;
+  z-index: 2;
   display: none;
 }
+
+  header .menu ul {
+    background-color: #ccc5e4;
+    list-style: none;
+  }
+
+  header .menu .element {
+    list-style: none;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+
+    display: block;
+    background: linear-gradient(to left, rgba(250, 235, 215, 0.05) 50%, rgba(139, 48, 196, 0.25) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: background-position 0.3s ease;
+  }
+
+  header .menu .section {
+    list-style: none;
+    padding: 0.8rem 1rem;
+    
+    margin-left: 0.5rem;
+    font-family: var(--font-poppins);
+    font-weight: bolder;
+    color: gray;
+  }
+
+  header .menu a,
+  header .menu a:active {
+    color: black;
+    text-decoration: none;
+  }
+
+  header .menu .element:hover {
+    background-position: left;
+    transition: background-position 0.35s ease-in;
+  }
 
 /* !media query */
 
@@ -256,25 +313,8 @@ footer .copyright {
     opacity: 0;
   }
 
-  header .menu {
-    position: absolute;
-    display: block;
-    height: calc(100vh - 3.5rem);
-    width: 100%;
-    left: 0;
-    /* background-color: aqua; */
-    transition:
-      top 0.4s,
-      opacity 0.3s;
-
-    overflow: auto;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 1;
-  }
-
   header .show-menu {
-    opacity: 1;
+    display: block;
     pointer-events: initial;
   }
   header .menu::-webkit-scrollbar {
@@ -282,7 +322,7 @@ footer .copyright {
   }
 
   header .menu ul {
-    background-color: antiquewhite;
+    background-color: #ccc5e4;
   }
 
   header .menu .element {
@@ -290,7 +330,7 @@ footer .copyright {
     padding: 0.8rem 1rem;
     cursor: pointer;
 
-    display: block; /* or block */
+    display: block;
     background: linear-gradient(to left, rgba(250, 235, 215, 0.05) 50%, rgba(139, 48, 196, 0.25) 50%);
     background-size: 200% 100%;
     background-position: right;
@@ -314,17 +354,10 @@ footer .copyright {
   }
 
   header .menu .element:hover {
-    /* background-color: rgba(139, 48, 196, 0.05); */
     background-position: left;
     transition: background-position 0.35s ease-in;
   }
-/* 
-  header .menu .section:hover {
-    background-color: rgba(0, 0, 0, 0);
-    cursor: default;
-  } */
-
-  /* ?logo */
+  
   .logo img {
     position: relative;
     top: 0.1rem;

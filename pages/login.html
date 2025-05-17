@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../styles/login.css">
     <title>Login</title>
+    <link rel="stylesheet" href="./../styles/login.css">
 </head>
 <body>
     
@@ -23,6 +23,7 @@
                     </span>
                     <input type="text" id="info_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_info'>invalid username or email</div>
             </div>
             
             
@@ -34,6 +35,7 @@
                     </span>
                     <input type="password" id="password_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_password'>invalid Password</div>
             </div>
             
             <!--<div id="reset_password" style="margin-top: 10px;">Forget Password? <a href="#" id="reset_password_link" class="page_link">reset Password</a></div>-->
@@ -44,8 +46,7 @@
             
 
             <div id="signup" style="margin-top: 10px;">Don't have acoount ? <a href="./signup.html" id="signup_link" class="page_link">Sign up</a></div>
-            
-            
+            <br/>
         </form>
         <script src="./../scripts/login.js"></script>
     </div>

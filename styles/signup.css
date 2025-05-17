@@ -16,7 +16,7 @@ body
 @font-face
 {
     font-family: 'Montserrat';
-    src: url("\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
+    src: url("./../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 #welcome
@@ -136,6 +136,7 @@ body
     padding-right: 0px;
     margin: 1rem;
     width: 90%;
+    display: none;
 }
 #welcome div {
     display: flex;
@@ -151,7 +152,15 @@ body
 }
 }
 
-@media (max-width: 400px) {
+.msg
+{
+  color: red;
+  font-weight: 600;
+  visibility: hidden;
+}
+
+@media (max-width: 400px)
+{
     #welcome h1
     {
         font-size: 20pt;

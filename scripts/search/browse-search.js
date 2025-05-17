@@ -8,6 +8,7 @@ let obj = [
     hours: "10h",
     link: "./../overview.html",
     category: "Game",
+    language: "English",
   },
   {
     image: "/assets/course banners/تعلم HTML في فيديو واحد 1.svg",
@@ -18,6 +19,7 @@ let obj = [
     hours: "4h",
     link: "./../overview.html",
     category: "web",
+    language: "English",  
   },
   {
     image: "/assets/course banners/كورس بايثون 1.svg",
@@ -28,6 +30,7 @@ let obj = [
     hours: "56h 21m",
     link: "./../overview.html",
     category: "Data Science",
+    language: "English",
   },
   {
     image: "/assets/course banners/Unreal Engine 1.svg",
@@ -38,6 +41,7 @@ let obj = [
     hours: "41h 26m",
     link: "./../overview.html",
     category: "Game",
+    language: "English",
   },
 ];
 
@@ -46,6 +50,10 @@ let searchInput = document.querySelector(".search-input");
 let searchHistory = window.localStorage.getItem("search");
 let searchResult = document.querySelector(".container__course-list__result");
 let cardList = document.querySelector(".course-list");
+let checkboxes = document.querySelectorAll("input[type='checkbox']")
+
+
+filters();
 
 if (window.localStorage.getItem("search")) {
   searchResult.innerHTML = `Results for "${window.localStorage.getItem(
@@ -53,10 +61,10 @@ if (window.localStorage.getItem("search")) {
   )}"`;
   searchInput.value = window.localStorage.getItem("search");
   cardList.innerHTML = searchCourse(window.localStorage.getItem("search"));
-  window.localStorage.clear();
+  // window.localStorage.clear();
 }
 
-if (searchInput.value === "") {
+if (searchInput.value == "") {
   cardList.innerHTML = addCourse(obj);
   searchResult.innerHTML = "";
 }
@@ -64,11 +72,19 @@ if (searchInput.value === "") {
 searchInput.addEventListener("input", () => {
   searchResult.innerHTML = `Results for "${searchInput.value}"`;
   cardList.innerHTML = searchCourse(searchInput.value);
+  animateCards();
 });
+
+// prevent reloading when submitting
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 
 // ----add course and search course functions----
 
 function searchCourse(text) {
+  uncheckAll();
   return addCourse(
     obj.filter(
       (el) =>
@@ -76,6 +92,43 @@ function searchCourse(text) {
         el.title.toLowerCase().includes(text.toLowerCase())
     )
   );
+}
+// search by filter
+function searchCategory(text) {
+  return addCourse(
+    obj.filter(
+      (el) =>
+        el.category.includes(text) ||
+        el.category.toLowerCase().includes(text.toLowerCase())
+    )
+  );
+}
+
+function filters() {
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked){
+        uncheckAll()
+        checkbox.checked = true;
+        chosenCategory = checkbox.dataset.category;
+        cardList.innerHTML = searchCategory(chosenCategory);
+        searchResult.innerHTML = `Results for ${chosenCategory}`;
+        searchInput.value = chosenCategory;
+      }
+      else {
+        cardList.innerHTML = addCourse(obj);
+        searchResult.innerHTML = "";
+        searchInput.value = "";
+      }
+      animateCards();
+    });
+  });
+}
+
+function uncheckAll() {
+  checkboxes.forEach(checkbox => {
+    checkbox.checked = false;
+  });
 }
 
 function addCourse(arr) {
@@ -102,4 +155,31 @@ function addCourse(arr) {
             </li>`;
     })
     .join("");
+}
+
+// animate cards on hover
+function animateCards() {
+  const cards = document.querySelectorAll(".card");
+  const background = document.getElementById("background");
+
+  cards.forEach(card => {
+      card.addEventListener("mouseover", () => {
+          card.style.cssText = "transform: translateY(-20px); transition: all 0.3s ease-out; color: #8B30C4";
+          background.style.animationPlayState = "paused";
+      });
+      card.addEventListener("mouseleave", () => {
+          card.style.cssText = "transform: translateY(0); transition: all 0.3s ease-out; color: black";
+          background.style.animationPlayState = "running";
+      });
+      card.addEventListener("click", () => {
+          window.location.href = "./../overview.html";
+      });
+  });
+}
+
+// filter
+function filter() {
+  let checkboxes = document.querySelectorAll("input[type='checkbox']")
+  console.log(checkboxes);
+  
 }

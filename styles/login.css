@@ -16,7 +16,7 @@ body
 @font-face
 {
     font-family: 'Montserrat';
-    src: url("\Montserrat\Montserrat-VariableFont_wght.ttf") format("truetype");
+    src: url("./../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
 #background_sign
@@ -88,6 +88,12 @@ body
 #submit_btn:hover
 {
     background-color: #f397f8ff;
+}
+.msg
+{
+  color: red;
+  font-weight: 600;
+  visibility: hidden;
 }
 
 
