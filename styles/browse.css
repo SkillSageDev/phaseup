@@ -48,3 +48,26 @@
 
 }
 
+@media (max-width: 585px) {
+    main .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .container__filters {
+        width: 100%;
+    }
+
+    main .container__filters__checkbox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 4%;
+    }
+
+    main .container__filters__checkbox h4 {
+        margin: 0;
+    }
+}
+

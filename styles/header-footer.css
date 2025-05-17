@@ -316,7 +316,7 @@ header .menu {
  
 
   header .show-menu {
-    opacity: 1;
+    display: block;
     pointer-events: initial;
   }
   header .menu::-webkit-scrollbar {
