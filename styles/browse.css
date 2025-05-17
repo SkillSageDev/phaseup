@@ -7,15 +7,14 @@
 
 .container{
     display: flex;
-    background: #ccc;
+    background: linear-gradient(#e7e7e7, white);
     width: 100%;
 }
 
 .container__filters{
     width: 20%;
-    background-color: aqua;
+    background-color: #e3e1e9;
     padding: 2.5rem;
-
 }
 
 .container__filters__checkbox{
@@ -28,10 +27,10 @@
     margin-top: 1rem;
 }
 
-.container__filters__checkbox input{
+.container__filters__checkbox input[type="checkbox"]{
     margin-right: 0.5rem;
+    accent-color: #8b30c4;
 }
-
 
 .container__course-list{
     padding: 2.5rem;
@@ -42,7 +41,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem 1rem;
     margin: 0 auto;
     width: 100%;
     margin-top: 1rem;

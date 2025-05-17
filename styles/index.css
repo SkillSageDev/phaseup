@@ -1,11 +1,5 @@
-/* 
-    features: improve welcome board
-                login & user icon js
-*/
-.lineTitle {
-    font-size: 20pt;
-    font-weight: bold;
-    margin: 1rem 0;
+main {
+    margin-bottom: 4rem;
 }
 
 main > #welcome {
@@ -13,15 +7,56 @@ main > #welcome {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #e3e1e9, #fff);
+    background: linear-gradient(to top, #e3e1e949, transparent);
+    height: 18rem;
+}
+
+main > #welcome .bg {
+    position: relative;
+    width: 100%;
+    height: 18rem;
+    background-image: url("./../assets/welcoming.png");
+    background-size: inherit 18rem;
+    background-position: center -700px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    pointer-events: none;
 }
 
 main > #welcome h1 {
     margin: 2rem 0 1rem 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 8px;
+    padding: 0.5rem;
 }
 
 main > #welcome h2 {
     margin: 0 0 2rem 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.253);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.lineTitle {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 2rem 0;
+    margin-left: 3%;
+}
+
+main div[id="background"] {
+    width: 100%;
+    height: 245%;
+    position: absolute;
+    background-image: url("./../assets/pattern3.png");
+    filter: opacity(0.5);
+    z-index: -1;
 }
 
 @media (max-width: 585px) {
@@ -31,5 +66,15 @@ main > #welcome h2 {
 
     main > #welcome h2 {
         font-size: 12pt;
+    }
+}
+
+@keyframes background_scroll {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 -90%;
     }
 }
