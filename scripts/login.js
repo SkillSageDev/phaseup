@@ -55,6 +55,7 @@ login.addEventListener("submit",(e) =>
     e.preventDefault();
     if(valid)
     {
+        window.localStorage.setItem("username", info.value);
         window.location.href = "../index.html"
     }
 })

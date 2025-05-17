@@ -88,6 +88,7 @@ signup.addEventListener("submit",(e) =>
         const valid = valid_username() && valid_email() && valid_password() && valid_confirm_password()
         if(valid)
         {
+            window.localStorage.setItem("username", username.value);
             window.location.href = "./../index.html"
         }
     })
