@@ -12,6 +12,7 @@ cards.forEach(card => {
         background.style.animationPlayState = "running";
     });
     card.addEventListener("click", () => {
+        window.localStorage.setItem("course_title", decodeHtmlEntities(card.children[1].children[0].innerHTML));
         if (window.location.pathname === "/index.html"){
             window.location.href = "./pages/overview.html";
         }
@@ -20,3 +21,7 @@ cards.forEach(card => {
         }
     });
 });
+
+function decodeHtmlEntities(str) {
+  return new DOMParser().parseFromString(str, "text/html").documentElement.textContent;
+}

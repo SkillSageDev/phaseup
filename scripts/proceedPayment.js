@@ -1,25 +1,3 @@
-function moveLectures() {
-  const width = document.documentElement.clientWidth;
-  const lectures = document.querySelector(".course-lectures");
-  const outsideContainer = document.getElementById("outside-container");
-  const courseInfo = document.querySelector(".lectures-overview");
-
-  console.log("Current width:", width);
-
-  if (width <= 480) {
-    outsideContainer.appendChild(lectures);
-    console.log("Moved course-lectures OUTSIDE");
-  } else {
-    courseInfo.appendChild(lectures);
-    console.log("Moved course-lectures BACK INSIDE");
-  }
-  if (width == 500) {
-    console.log("you are gay");
-  }
-}
-window.addEventListener("load", moveLectures);
-window.addEventListener("resize", moveLectures);
-
 // variable values
 let data = [
   {
@@ -32,6 +10,7 @@ let data = [
     link: "./overview.html",
     category: "Game",
     language: "English",
+    price: "45.99$",
   },
   {
     image: "./../assets/course banners/تعلم HTML في فيديو واحد 1.svg",
@@ -42,7 +21,8 @@ let data = [
     hours: "4h",
     link: "./overview.html",
     category: "web",
-    language: "English",  
+    language: "English", 
+    price: "19.99$", 
   },
   {
     image: "./../assets/course banners/كورس بايثون 1.svg",
@@ -54,6 +34,7 @@ let data = [
     link: "./overview.html",
     category: "Data Science",
     language: "English",
+    price: "34.99$",
   },
   {
     image: "./../assets/course banners/Unreal Engine 1.svg",
@@ -65,23 +46,25 @@ let data = [
     link: "./overview.html",
     category: "Game",
     language: "English",
+    price: "69.99$",
   },
 ];
 
-let banner = document.getElementById("course-preview-image"); // src & alt
-let title = document.getElementById("course-label");
-let description = document.querySelectorAll(".course-description")[0].children[1];
-let length = document.getElementById("course-length");
+let banner = document.getElementById("productImage").children[0]; // src & alt
+let title = document.querySelector("h3");
+let price = document.querySelector("h2");
 
 const storedTitle = window.localStorage.getItem("course_title");
 let obj = findByTitle(storedTitle);
 
+console.log(banner);
+
+
 // assign new title
 title.innerHTML = storedTitle;
-description.innerHTML = obj.description;
-length.innerHTML = obj.hours;
 banner.src = obj.image;
 banner.alt = obj.alt;
+price.innerHTML = obj.price;
 
 
 function findByTitle(title) {

@@ -1,25 +1,3 @@
-function moveLectures() {
-  const width = document.documentElement.clientWidth;
-  const lectures = document.querySelector(".course-lectures");
-  const outsideContainer = document.getElementById("outside-container");
-  const courseInfo = document.querySelector(".lectures-overview");
-
-  console.log("Current width:", width);
-
-  if (width <= 480) {
-    outsideContainer.appendChild(lectures);
-    console.log("Moved course-lectures OUTSIDE");
-  } else {
-    courseInfo.appendChild(lectures);
-    console.log("Moved course-lectures BACK INSIDE");
-  }
-  if (width == 500) {
-    console.log("you are gay");
-  }
-}
-window.addEventListener("load", moveLectures);
-window.addEventListener("resize", moveLectures);
-
 // variable values
 let data = [
   {
@@ -68,21 +46,26 @@ let data = [
   },
 ];
 
-let banner = document.getElementById("course-preview-image"); // src & alt
+let video = document.getElementById("course-preview-vid");
 let title = document.getElementById("course-label");
-let description = document.querySelectorAll(".course-description")[0].children[1];
-let length = document.getElementById("course-length");
+let lecsMain = Array.from(document.querySelectorAll(".list-lecture"));
+let lecs = Array.from(document.querySelectorAll("p[id=lecture-bar-label]"));
+console.log(lecsMain);
 
 const storedTitle = window.localStorage.getItem("course_title");
 let obj = findByTitle(storedTitle);
 
 // assign new title
-title.innerHTML = storedTitle;
-description.innerHTML = obj.description;
-length.innerHTML = obj.hours;
-banner.src = obj.image;
-banner.alt = obj.alt;
+video.poster = obj.image;
+video.innerHTML = obj.alt;
 
+for (let i in lecs){
+    lecs[i].addEventListener("click", () => {
+        title.innerHTML = lecs[i].innerHTML;
+        uncheckAll();
+        lecsMain[i].style.backgroundColor = "#9959c0";
+    });
+};
 
 function findByTitle(title) {
   for (let el of data){    
@@ -91,4 +74,10 @@ function findByTitle(title) {
     }
   }
   return null;
+}
+
+function uncheckAll() {
+  lecsMain.forEach(lecBar => {
+    lecBar.style.backgroundColor = "#e3e1e9";
+  });
 }
