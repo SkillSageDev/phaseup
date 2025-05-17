@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./../styles/header-footer.css" />
     <link rel="stylesheet" href="./../styles/courseContent.css" />
+
+    <script src="./../scripts/menu.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,7 +27,7 @@
           </div>
           <div class="explore">
             
-            <button>
+            <button id="explorer">
               <span>Explore</span>
               <img src="./../assets/icons/angle-down-solid.svg" />
             </button>
@@ -63,11 +65,17 @@
         <section class="course-overview">
       <div class="lectures-overview">
         <div class="leftside">
-          <img
-            id="course-preview-image"
-            src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg"
-            alt=""
-          />
+          <video src="./../assets/vids/vid.mp4" id="course-preview-vid" poster="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" controls>
+            Your browser doesn't support videos
+          </video>
+          <div id="player">
+            <svg class="icon play" viewBox="0 0 56 56" fill="#8B30C4" xmlns="http://www.w3.org/2000/svg">
+              <path d="M49.0691 19.3667L14.2272 1.94581C7.84418 -1.24572 
+              0.333984 3.39584 0.333984 10.5323V43.4661C0.333984 50.6025 
+              7.84418 55.2441 14.2272 52.0526L49.0691 34.6316C55.3586 
+              31.4869 55.3586 22.5115 49.0691 19.3667Z"/>
+            </svg>
+          </div>
           <div class="flex">
             <h1 id="course-label">Introduction and what you need to Learn</h1>
             <div class="instructor">
@@ -232,4 +240,5 @@
 
     <script src="./../scripts/header-showmenu.js"></script>
     <script src="./../scripts/courseOverview.js"></script>
+    <script src="./../scripts/player.js"></script>
 </body>

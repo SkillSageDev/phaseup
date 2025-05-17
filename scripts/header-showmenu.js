@@ -11,8 +11,8 @@ const showMenu = function (toggleId, navId) {
 
 showMenu("hamburger", "menu");
 
-const toggle = document.getElementById("explorer"),
-  nav = document.getElementById("menu");
+const toggle = document.getElementById("explorer");
+let nav = document.getElementById("menu");
 
 toggle.addEventListener("click", () => {
   let currentDisplay = nav.style.display;

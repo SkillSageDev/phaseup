@@ -5,6 +5,7 @@
 }
 .course-overview {
   border-top: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 4rem;
 }
 .lectures-overview {
   display: flex;
