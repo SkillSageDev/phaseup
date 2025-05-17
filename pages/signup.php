@@ -33,6 +33,7 @@
                     </span>
                     <input type="text" id="username_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_username'>username Must be more than 2 characters</div>
             </div>
 
             <div id="email">
@@ -43,6 +44,7 @@
                     </span>
                     <input type="email" id="email_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_email'>Wrong Email</div>
             </div>
 
 
@@ -54,6 +56,7 @@
                     </span>
                     <input type="password" id="password_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_password'>password Must be more than 7 characters</div>
             </div>
 
             <div id="confirm_password">
@@ -64,6 +67,7 @@
                     </span>
                     <input type="password" id="confirm_password_input" class="input" required>
                 </div>
+                <div class = 'msg' id ='invalid_confirm_password'>confirm password doesn't match with password</div>
             </div>
 
             <div id="submit">

@@ -18,7 +18,7 @@ fetch("/phaseup/utility/search.php")
       window.localStorage.clear();
     }
 
-    if (searchInput.value === "") {
+    if (searchInput.value == "") {
       cardList.innerHTML = addCourse(cards);
       searchResult.innerHTML = "";
     }
@@ -26,11 +26,19 @@ fetch("/phaseup/utility/search.php")
     searchInput.addEventListener("input", () => {
       searchResult.innerHTML = `Results for "${searchInput.value}"`;
       cardList.innerHTML = searchCourse(searchInput.value);
-    });
+      animateCards();
+});
+
+// prevent reloading when submitting
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 
     // ----add course and search course functions----
     function searchCourse(text) {
-      return addCourse(
+      uncheckAll();
+  return addCourse(
         cards.filter(
           (el) =>
             el.title.includes(text) ||
@@ -38,8 +46,45 @@ fetch("/phaseup/utility/search.php")
         )
       );
     }
+// search by filter
+function searchCategory(text) {
+  return addCourse(
+    obj.filter(
+      (el) =>
+        el.category.includes(text) ||
+        el.category.toLowerCase().includes(text.toLowerCase())
+    )
+  );
+}
 
-    function addCourse(arr) {
+function filters() {
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked){
+        uncheckAll()
+        checkbox.checked = true;
+        chosenCategory = checkbox.dataset.category;
+        cardList.innerHTML = searchCategory(chosenCategory);
+        searchResult.innerHTML = `Results for ${chosenCategory}`;
+        searchInput.value = chosenCategory;
+      }
+      else {
+        cardList.innerHTML = addCourse(obj);
+        searchResult.innerHTML = "";
+        searchInput.value = "";
+      }
+      animateCards();
+    });
+  });
+}
+
+function uncheckAll() {
+  checkboxes.forEach(checkbox => {
+    checkbox.checked = false;
+  });
+}
+
+    function addCourse(arra) {
       return arr
         .map((obj) => {
           return `<li class="card-item">
@@ -65,3 +110,30 @@ fetch("/phaseup/utility/search.php")
         .join("");
     }
   });
+
+// animate cards on hover
+function animateCards() {
+  const cards = document.querySelectorAll(".card");
+  const background = document.getElementById("background");
+
+  cards.forEach(card => {
+      card.addEventListener("mouseover", () => {
+          card.style.cssText = "transform: translateY(-20px); transition: all 0.3s ease-out; color: #8B30C4";
+          background.style.animationPlayState = "paused";
+      });
+      card.addEventListener("mouseleave", () => {
+          card.style.cssText = "transform: translateY(0); transition: all 0.3s ease-out; color: black";
+          background.style.animationPlayState = "running";
+      });
+      card.addEventListener("click", () => {
+          window.location.href = "./../overview.html";
+      });
+  });
+}
+
+// filter
+function filter() {
+  let checkboxes = document.querySelectorAll("input[type='checkbox']")
+  console.log(checkboxes);
+  
+}

@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="./../styles/fonts/poppins.css" />
     <link rel="stylesheet" href="./../assets/fontawesome/css/all.css" />
     <link rel="stylesheet" href="./../styles/header-footer.css" />
-    <link rel="stylesheet" href="./../styles/overview style.css" />
-    <link rel="stylesheet" href="./../styles/course content.css">
+    <link rel="stylesheet" href="./../styles/courseContent.css" />
+
+    <script src="./../scripts/menu.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,8 +26,8 @@
             /></a>
           </div>
           <div class="explore">
-            <!-- ! needs some modification -->
-            <button>
+            
+            <button id="explorer">
               <span>Explore</span>
               <img src="./../assets/icons/angle-down-solid.svg" />
             </button>
@@ -41,18 +42,10 @@
               />
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- <div class="search-result">
-                <ul>
-                  <li>Javascript</li>
-                  <li>Javascript</li>
-                </ul>
-              </div> -->
           </form>
           <div class="auth">
             <a href="./login.php" class="login">Login</a>
             <a href="./signup.php" class="signup">Sign up</a>
-            <!-- <button class="login">Login</button> -->
-            <!-- <button class="signup">Sign up</button> -->
           </div>
   
           <!-- ----Hamberger Menu---- -->
@@ -68,156 +61,184 @@
         </div>
       </header>
 
-
-
-
-
-    <div class="dotcontainer">
-
-        <div class="episode_main_left">
-            <div class="first_colum">
-
-                <div class="episode_image_preview">
-        
-                    <img class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-        
-                </div>
-    
-                <div class="completion_section">
-                    
-                    <div class="completion_bar">
-    
-                        <div class="completion_percentage"> </div>
-    
-                    </div>
-                    <p>you've completed 4 out of 8 videos in this course</p>
-                </div>
-    
+      <main>
+        <section class="course-overview">
+      <div class="lectures-overview">
+        <div class="leftside">
+          <video src="./../assets/vids/vid.mp4" id="course-preview-vid" poster="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" controls>
+            Your browser doesn't support videos
+          </video>
+          <div id="player">
+            <svg class="icon play" viewBox="0 0 56 56" fill="#8B30C4" xmlns="http://www.w3.org/2000/svg">
+              <path d="M49.0691 19.3667L14.2272 1.94581C7.84418 -1.24572 
+              0.333984 3.39584 0.333984 10.5323V43.4661C0.333984 50.6025 
+              7.84418 55.2441 14.2272 52.0526L49.0691 34.6316C55.3586 
+              31.4869 55.3586 22.5115 49.0691 19.3667Z"/>
+            </svg>
+          </div>
+          <div class="flex">
+            <h1 id="course-label">Introduction and what you need to Learn</h1>
+            <div class="instructor">
+              <img
+                id="instructor-icon"
+                src="./../assets/icons/Elzero Web Shool.png"
+                alt="there is no image yet"
+              />
+              <h1 id="instructor-name">Elzero Web School</h1>
             </div>
-    
-            <div class="description_section">
-    
-                <h1 class="episode_title">1.introduction: what you need to learn</h1>
-                <p class="episode_description">Welcome to the HTML Fundamentals course! This course is designed for beginners who are eager to learn the building blocks of web development. HTML (HyperText Markup Language) is the foundation of all web pages and applications. By the end of this course, you will have a solid understanding of how to create and structure web content using HTML.
-                </p>
-            
-            </div>
+          </div>
         </div>
-
-        <div class="episode_main_right">
-            <div class="episodes_container">
-                <ul>
-                    <div class="episode_box">
-    
-                        <div class="episode_image">
-                            
-                            <img  class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-                            
-                        </div>
-                        
-                        <div class="episode_title">
-    
-                            <p>1.Introduction: What You Need To Learn</p>
-    
-                        </div>
-    
-                    </div>
-    
-                    <div class="episode_box">
-    
-                        <div class="episode_image">
-                            
-                            <img  class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-                            
-                        </div>
-    
-                        <div class="episode_title">
-    
-                            <p>2.Elements And Browser</p>
-    
-                        </div>
-    
-                    </div>
-    
-                    <div class="episode_box">
-    
-                        <div class="episode_image">
-                            
-                            <img  class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-                            
-                        </div>
-    
-                        <div class="episode_title">
-    
-                            <p>3.First Project And First Page</p>
-    
-                        </div>
-    
-                    </div>
-    
-                    <div class="episode_box">
-    
-                        <div class="episode_image">
-                            
-                            <img  class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-                            
-                        </div>
-    
-                        <div class="episode_title">
-    
-                            <p>4.Head And Nested Elements</p>
-    
-                        </div>
-    
-                    </div>
-    
-                    <div class="episode_box">
-    
-                        <div class="episode_image">
-                            
-                            <img  class="resize"src="./../assets/course banners/تعلم HTML في فيديو واحد 1.svg" alt="">
-                            
-                        </div>
-    
-                        <div class="episode_title">
-    
-                            <p>5.Comments And Use Cases</p>
-    
-                        </div>
-    
-                    </div>
-    
-                </ul>
-                
+        <div class="course-lectures">
+          <ul class="course-lectures-list">
+            <li class="list-lecture">
+              <div>
+                <p id="lecture-bar-number">1 .</p>
+                <p id="lecture-bar-label">Introduction</p>
+                <p id="lecture-bar-length">10.55</p>
+              </div>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">2 .</p>
+              <p id="lecture-bar-label">Elements and Browser</p>
+              <p id="lecture-bar-length">3.56</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">3 .</p>
+              <p id="lecture-bar-label">First project</p>
+              <p id="lecture-bar-length">9.0</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">4 .</p>
+              <p id="lecture-bar-label">Head and nested Elements</p>
+              <p id="lecture-bar-length">7.13</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">5 .</p>
+              <p id="lecture-bar-label">Comments And Use Cases</p>
+              <p id="lecture-bar-length">3.47</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">6 .</p>
+              <p id="lecture-bar-label">Doctype</p>
+              <p id="lecture-bar-length">3.14</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">7 .</p>
+              <p id="lecture-bar-label">Heading And use Cases</p>
+              <p id="lecture-bar-length">4.50</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">8 .</p>
+              <p id="lecture-bar-label">Syntax And Tests</p>
+              <p id="lecture-bar-length">4.37</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">9 .</p>
+              <p id="lecture-bar-label">Paragraph Element</p>
+              <p id="lecture-bar-length">3.32</p>
+            </li>
+            <li class="list-lecture">
+              <p id="lecture-bar-number">10 .</p>
+              <p id="lecture-bar-label">Formatting Elements</p>
+              <p id="lecture-bar-length">10.3</p>
+            </li>
+          </ul>
+          <div class="completion-section">
+            <div class="completion-bar">
+              <div class="completion_percentage"></div>
             </div>
+            <p>you've completed 4 out of 8 videos in this course</p>
+          </div>
+          <div class="button">
+            <a id="share" href="">
+              <img src="./../assets/icons/wishlist-icon.svg" alt="" />
+              <p>Save</p>
+            </a>
+            <a id="save" href="">
+              <img src="./../assets/icons/share-icon.svg" alt="" />
+              <p>share</p>
+            </a>
+          </div>
         </div>
-        
- 
-    </div>
+      </div>
+      <div id="outside-container"></div>
+
+        </section>
+      </main>
 
     <footer>
-        <div class="social">
-            <a class="linkedin" href="#"
-            ><img src="./../assets/icons/linkedin-brands.svg" alt="linkedin"
-            /></a>
-            <a class="youtube" href="#"
-            ><img src="./../assets/icons/youtube-brands-solid.svg" alt="youtube"
-            /></a>
-            <a class="facebook" href="#"
-            ><img src="./../assets/icons/facebook-brands.svg" alt="facebook"
-            /></a>
-            <a class="instagram" href="#"
-            ><img src="./../assets/icons/instagram-brands-solid.svg" alt="instagram"
-            /></a>
-            <a class="tiktok" href="#"
-            ><img src="./../assets/icons/tiktok-brands-solid.svg" alt="tiktok"
-            /></a>
-            <a class="x" href="#"
-            ><img src="./../assets/icons/x-twitter-brands-solid.svg" alt="x"
-            /></a>
-        </div>
-        <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
+      <div class="social">
+        <a class="linkedin" href="#">
+          <svg class="icon linkedin" viewBox="0 0 512 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 
+            14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 
+            0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 
+            38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 
+            0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 
+            62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+          </svg>
+        </a>
+        <a class="youtube" href="#">
+          <svg class="icon youtube" viewBox="0 25 576 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 
+            64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 
+            48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 
+            23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 
+            213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 
+            11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 
+            81.2-142.7 81.2z"/>
+          </svg>
+        </a>
+        <a class="facebook" href="#">
+          <svg class="icon facebook" viewBox="0 0 512 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 
+            256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 
+            39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 
+            0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 
+            494.8 512 386.9 512 256h0z"/>
+          </svg>
+        </a>
+        <a class="instagram" href="#">
+          <svg class="icon instagram" viewBox="0 -25 512 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 
+            114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 
+            141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 
+            74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 
+            74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 
+            0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 
+            26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 
+            0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 
+            37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 
+            34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 
+            93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 
+            0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 
+            11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7
+            9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 
+            132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 
+            29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+          </svg>
+        </a>
+        <a class="tiktok" href="#">
+          <svg class="icon ticktock" viewBox="0 0 512 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6
+             162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 
+             0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 
+             102.4a121.4 121.4 0 0 0 67 20.1z"/>
+          </svg>
+        </a>
+        <a class="x" href="#">
+          <svg class="icon twitter" viewBox="0 0 512 512" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 389.2 48 h 70.6 L 305.6 224.2 L 487 464 H 
+            345 L 233.7 318.6 L 106.5 464 H 35.8 L 200.7 275.5 L 
+            26.8 48 H 172.4 L 272.9 180.9 L 389.2 48 Z M 364.4 
+            421.8 h 39.1 L 151.1 88 h -42 L 364.4 421.8 Z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="copyright">&copy 2025 PhaseUp Inc. All rights reserved.</div>
     </footer>
 
     <script src="./../scripts/header-showmenu.js"></script>
+    <script src="./../scripts/courseOverview.js"></script>
+    <script src="./../scripts/player.js"></script>
 </body>

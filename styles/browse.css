@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-poppins);
+}
+
+.container{
+    display: flex;
+    background: linear-gradient(#e7e7e7, white);
+    width: 100%;
+}
+
+.container__filters{
+    width: 20%;
+    background-color: #e3e1e9;
+    padding: 2.5rem;
+}
+
+.container__filters__checkbox{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container__filters__checkbox h4{
+    margin-top: 1rem;
+}
+
+.container__filters__checkbox input[type="checkbox"]{
+    margin-right: 0.5rem;
+    accent-color: #8b30c4;
+}
+
+.container__course-list{
+    padding: 2.5rem;
+    width: 80%;
+}
+
+.course-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-content: center;
+    gap: 3rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 1rem;
+
+}
+

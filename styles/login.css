@@ -89,6 +89,12 @@ body
 {
     background-color: #f397f8ff;
 }
+.msg
+{
+  color: red;
+  font-weight: 600;
+  visibility: hidden;
+}
 
 
 @media (max-width: 768px) {
