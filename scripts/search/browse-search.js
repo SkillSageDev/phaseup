@@ -61,7 +61,7 @@ if (window.localStorage.getItem("search")) {
   )}"`;
   searchInput.value = window.localStorage.getItem("search");
   cardList.innerHTML = searchCourse(window.localStorage.getItem("search"));
-  window.localStorage.clear();
+  // window.localStorage.clear();
 }
 
 if (searchInput.value == "") {

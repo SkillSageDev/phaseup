@@ -11,52 +11,57 @@
     <link rel="stylesheet" href="./../styles/payment.css">
     
     <script src="./../scripts/menu.js" defer></script>
+    <script src="./../scripts/check-login.js" defer></script>
+    <script src="./../scripts/search/index-search.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <div class="hamburger" id="hamburger">
-        <i class="fa fa-bars"></i>
-        <i class="fa fa-close"></i>
-      </div>
-      <div class="logo">
-        <a href="./../index.html"><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo" /></a>
-      </div>
-      <div class="explore">
-        
-        <button id="explorer">
-          <span>Explore</span>
-          <img src="./../assets/icons/angle-down-solid.svg" />
-        </button>
-      </div>
-      <form action="" class="search">
-        <div class="search-box">
-          <input
-            type="text"
-            name="search"
-            placeholder="Looking for something?"
-            id="search"
-          />
-          <i class="fa-solid fa-magnifying-glass"></i>
+    <header>
+      <div class="container">
+        <div class="hamburger" id="hamburger">
+          <i class="fa fa-bars"></i>
+          <i class="fa fa-close"></i>
         </div>
-      </form>
-      <div class="auth">
-        <a href="./login.html" class="login">Login</a>
-        <a href="./signup.html" class="signup">Sign up</a>
-      </div>
+        <div class="logo">
+          <a href="./../index.html"
+            ><img src="./../assets/icons/figma-cons/PhaseUp Logo.svg" alt="logo"
+          /></a>
+        </div>
+        <div class="explore">
+          <button id="explorer">
+            <span>Explore</span>
+            <img src="./../assets/icons/angle-down-solid.svg" />
+          </button>
+        </div>
+        <form action="" class="search">
+          <div class="search-box">
+            <input
+              type="text"
+              name="search"
+              placeholder="Looking for something?"
+              id="search"
+              class="search-input"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+        <div class="auth">
+          <a href="./login.html" class="login">Login</a>
+          <a href="./signup.html" class="signup">Sign up</a>
+        </div>
 
-      <!-- ----Hamberger Menu---- -->
-    </div>
-    <div class="menu" id="menu">
-      <ul>
-        <li><a href="./login.html" class="element">Log in</a></li>
-        <li><a href="./signup.html" class="element">Sign up</a></li>
-        <li class="section"><span>Most popular</span></li>
-        <li><a href="#" class="element">Business</a></li>
-        <li><a href="#" class="element">Software</a></li>
-      </ul>
-    </div>
-  </header>
+        <!-- ----Hamberger Menu---- -->
+      </div>
+      <div class="menu" id="menu">
+        <ul>
+          <li><a href="./login.html" class="element">Log in</a></li>
+          <li><a href="./signup.html" class="element">Sign up</a></li>
+          <li class="section"><span>Most popular</span></li>
+          <li><a href="#" class="element">Data Science</a></li>
+          <li><a href="#" class="element">Game</a></li>
+          <li><a href="#" class="element">Web</a></li>
+        </ul>
+      </div>
+    </header>
 
     <main>
         <section id="payment_options">

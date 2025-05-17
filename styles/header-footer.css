@@ -248,7 +248,7 @@ header .menu {
     list-style: none;
     padding: 0.8rem 1rem;
     
-    margin: 1rem 0 0 0.5rem;
+    margin-left: 0.5rem;
     font-family: var(--font-poppins);
     font-weight: bolder;
     color: gray;
@@ -312,8 +312,6 @@ header .menu {
   header .fa-close {
     opacity: 0;
   }
-
- 
 
   header .show-menu {
     display: block;

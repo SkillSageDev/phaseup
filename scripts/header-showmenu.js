@@ -16,5 +16,6 @@ let nav = document.getElementById("menu");
 
 check.addEventListener("click", () => {
   let currentDisplay = nav.style.display;
-  nav.style.display = (currentDisplay === "none")? "block":"none"; 
+  nav.style.display = (currentDisplay === "none")? "block":"none";
+
 });
