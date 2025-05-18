@@ -44,7 +44,7 @@
 .card__title {
   margin: 1rem 0;
   /* takes 2 lines only */
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
